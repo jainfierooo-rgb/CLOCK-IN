@@ -162,11 +162,11 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Minimal Sleek Chevrons */}
+      {/* Minimal Sleek Chevrons - Hidden on mobile screens */}
       <button
         onClick={prevSlide}
         aria-label="Previous slide"
-        className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-black/75 backdrop-blur-md border border-white/20 flex items-center justify-center text-white transition-all hover:scale-105"
+        className="hidden sm:flex absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-black/75 backdrop-blur-md border border-white/20 items-center justify-center text-white transition-all hover:scale-105"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
@@ -174,10 +174,24 @@ export default function Hero() {
       <button
         onClick={nextSlide}
         aria-label="Next slide"
-        className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-black/75 backdrop-blur-md border border-white/20 flex items-center justify-center text-white transition-all hover:scale-105"
+        className="hidden sm:flex absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-black/75 backdrop-blur-md border border-white/20 items-center justify-center text-white transition-all hover:scale-105"
       >
         <ChevronRight className="w-6 h-6" />
       </button>
+
+      {/* Mobile Slide Indicator Dots */}
+      <div className="sm:hidden absolute bottom-5 left-0 right-0 z-20 flex justify-center items-center gap-2">
+        {slides.map((s, idx) => (
+          <button
+            key={s.id}
+            onClick={() => setCurrent(idx)}
+            aria-label={`Go to slide ${idx + 1}`}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              current === idx ? 'w-6 bg-[#2DD4BF]' : 'w-2 bg-white/40'
+            }`}
+          />
+        ))}
+      </div>
     </section>
   );
 }
