@@ -10,19 +10,19 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Top Notification Banner matching Uniphore */}
-      <div className="bg-[#0D9488] text-white text-[11px] sm:text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
+      {/* Top Notification Banner in Warm Modern Style */}
+      <div className="bg-[#FAF8F5] border-b border-[#EAE6DF] text-[#5A5852] text-[11px] sm:text-xs py-2 px-4 text-center font-mono tracking-wide flex items-center justify-center gap-2">
         <span className="truncate max-w-[280px] sm:max-w-none">
-          Clockin AI Deploys Autonomous Business Intelligence Across Enterprise Sectors
+          Custom AI Engineering &bull; Serving Businesses Across All Key Industries
         </span>
-        <Link href="/#flowchart" className="font-bold underline inline-flex items-center gap-1 hover:opacity-90 shrink-0">
-          <span>Learn more</span>
+        <Link href="/architecture" className="text-[#0A0A0A] font-bold underline inline-flex items-center gap-1 hover:opacity-80 shrink-0">
+          <span>How It Works</span>
           <ArrowRight className="w-3 h-3" />
         </Link>
       </div>
 
-      {/* Main Clean White Navbar */}
-      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#E5E0D8] transition-colors">
+      {/* Main Warm White Frosted Navbar */}
+      <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-[#EAE6DF] text-[#0A0A0A] transition-colors">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 py-3.5 sm:py-4 flex items-center justify-between">
           
           {/* Left: Minimal Logo */}
@@ -30,41 +30,47 @@ export default function Navbar() {
             href="/"
             className="flex items-center gap-2.5 text-[#0A0A0A] hover:opacity-85 transition-opacity shrink-0"
           >
-            <div className="w-8 h-8 rounded-lg bg-[#0A0A0A] flex items-center justify-center text-white shadow-2xs">
-              <Layers className="w-4 h-4 text-[#0D9488]" />
+            <div className="w-8 h-8 rounded-lg bg-[#0A0A0A] flex items-center justify-center text-white shadow-xs">
+              <Layers className="w-4 h-4 text-white" />
             </div>
             <span className="font-extrabold text-xl tracking-tight text-[#0A0A0A]">
-              CLOCKIN<span className="text-[#0D9488]">.AI</span>
+              CLOCKIN<span className="text-[#8A8780]">.AI</span>
             </span>
           </Link>
 
           {/* Center: Nav Links for Desktop */}
-          <nav className="hidden md:flex items-center gap-8 text-xs font-semibold text-[#262626] uppercase tracking-wider">
-            <Link href="/#industries" className="hover:text-[#0D9488] transition-colors">
+          <nav className="hidden md:flex items-center gap-7 text-xs font-mono font-medium text-[#5A5852] uppercase tracking-wider">
+            <Link href="/" className="hover:text-[#0A0A0A] transition-colors">
+              Home
+            </Link>
+            <Link href="/#industries" className="hover:text-[#0A0A0A] transition-colors">
               Industries
             </Link>
-            <Link href="/#flowchart" className="hover:text-[#0D9488] transition-colors">
+            <Link href="/architecture" className="hover:text-[#0A0A0A] transition-colors">
               How It Works
             </Link>
-            <Link href="/#reserve" className="hover:text-[#0D9488] transition-colors">
+            <Link href="/#demo" className="hover:text-[#0A0A0A] transition-colors">
+              Live Demo
+            </Link>
+            <Link href="/#reserve" className="hover:text-[#0A0A0A] transition-colors">
               Get Started
             </Link>
           </nav>
 
           {/* Right: Search & Action Button for Desktop */}
           <div className="hidden sm:flex items-center gap-4">
-            <button
-              aria-label="Search"
-              className="p-2 text-[#404040] hover:text-[#0A0A0A] transition-colors rounded-lg hover:bg-[#FAF8F5]"
+            <a
+              href="tel:+918848563824"
+              className="text-xs font-mono text-[#5A5852] hover:text-[#0A0A0A] transition-colors hidden lg:block"
             >
-              <Search className="w-4 h-4" />
-            </button>
+              +91 88485 63824
+            </a>
 
             <a
-              href="https://wa.me/919876543210?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20services."
+              href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 btn-teal-primary text-xs font-semibold shadow-sm hover:shadow"
+              className="px-5 py-2.5 btn-teal-primary text-xs font-semibold shadow-xs"
             >
               Contact us
             </a>
@@ -73,10 +79,10 @@ export default function Navbar() {
           {/* Mobile Menu Trigger */}
           <div className="flex items-center gap-2 sm:hidden">
             <a
-              href="https://wa.me/919876543210?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20services."
+              href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-1.5 btn-teal-primary text-[11px] font-semibold rounded-lg"
+              className="px-3 py-1.5 btn-teal-primary text-[11px] font-semibold rounded-full"
             >
               Contact
             </a>
@@ -100,51 +106,69 @@ export default function Navbar() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.25, ease: 'easeInOut' }}
-              className="md:hidden border-b border-[#E5E0D8] bg-white px-6 py-6 space-y-5 overflow-hidden shadow-xl"
+              className="md:hidden border-b border-[#EAE6DF] bg-white/95 backdrop-blur-2xl px-6 py-6 space-y-5 overflow-hidden shadow-2xl"
             >
               {/* Mobile Navigation Links */}
-              <nav className="flex flex-col divide-y divide-[#F2EFE9] text-sm font-bold uppercase tracking-wider text-[#0A0A0A]">
+              <nav className="flex flex-col divide-y divide-[#EAE6DF] text-xs font-mono uppercase tracking-wider font-semibold">
                 <Link
-                  href="/#industries"
+                  href="/"
                   onClick={() => setIsOpen(false)}
-                  className="py-3.5 flex items-center justify-between hover:text-[#0D9488]"
+                  className="py-3.5 flex items-center justify-between hover:text-[#5A5852]"
                 >
-                  <span>Industries</span>
-                  <ArrowRight className="w-4 h-4 text-[#888888]" />
+                  <span>Home</span>
+                  <ArrowRight className="w-4 h-4 text-[#8A8780]" />
                 </Link>
 
                 <Link
-                  href="/#flowchart"
+                  href="/#industries"
                   onClick={() => setIsOpen(false)}
-                  className="py-3.5 flex items-center justify-between hover:text-[#0D9488]"
+                  className="py-3.5 flex items-center justify-between hover:text-[#5A5852]"
+                >
+                  <span>Industries</span>
+                  <ArrowRight className="w-4 h-4 text-[#8A8780]" />
+                </Link>
+
+                <Link
+                  href="/architecture"
+                  onClick={() => setIsOpen(false)}
+                  className="py-3.5 flex items-center justify-between hover:text-[#5A5852]"
                 >
                   <span>How It Works</span>
-                  <ArrowRight className="w-4 h-4 text-[#888888]" />
+                  <ArrowRight className="w-4 h-4 text-[#8A8780]" />
+                </Link>
+
+                <Link
+                  href="/#demo"
+                  onClick={() => setIsOpen(false)}
+                  className="py-3.5 flex items-center justify-between hover:text-[#5A5852]"
+                >
+                  <span>Live Demo</span>
+                  <ArrowRight className="w-4 h-4 text-[#8A8780]" />
                 </Link>
 
                 <Link
                   href="/#reserve"
                   onClick={() => setIsOpen(false)}
-                  className="py-3.5 flex items-center justify-between hover:text-[#0D9488]"
+                  className="py-3.5 flex items-center justify-between hover:text-[#5A5852]"
                 >
                   <span>Get Started</span>
-                  <ArrowRight className="w-4 h-4 text-[#888888]" />
+                  <ArrowRight className="w-4 h-4 text-[#8A8780]" />
                 </Link>
               </nav>
 
               {/* Mobile Action Buttons */}
               <div className="pt-2 space-y-2.5">
                 <a
-                  href="https://wa.me/919876543210?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20services."
+                  href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20services."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full text-center py-3 btn-teal-primary text-xs font-bold uppercase tracking-wider block shadow-sm"
+                  className="w-full text-center py-3 btn-teal-primary text-xs font-bold uppercase tracking-wider block shadow-xs"
                 >
-                  <span>Dispatch on WhatsApp</span>
+                  <span>Dispatch on WhatsApp (+91 88485 63824)</span>
                 </a>
 
-                <div className="text-center text-[10px] font-mono text-[#888888] pt-1 uppercase">
-                  BENGALURU, INDIA // 24/7 SRE NODE
+                <div className="text-center text-[10px] font-mono text-[#7A7770] pt-1 uppercase">
+                  KERALA, INDIA // 24/7 OPERATIONS DESK
                 </div>
               </div>
             </motion.div>

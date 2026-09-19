@@ -274,24 +274,22 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
   const Icon = sector.icon;
 
   return (
-    <div className="min-h-screen bg-white text-[#0A0A0A] flex flex-col justify-between selection:bg-[#CCFBF1] selection:text-[#0F766E]">
+    <div className="min-h-screen bg-white text-[#0A0A0A] flex flex-col justify-between selection:bg-[#0A0A0A] selection:text-white">
       <Navbar />
 
       <main className="flex-1">
-        
-        {/* Breadcrumbs & Sector Hero Header */}
-        <section className="border-b border-[#E5E0D8] bg-[#FAF8F5] pt-10 pb-16">
+        {/* Sector Header / Breadcrumb */}
+        <section className="pt-12 pb-16 border-b border-[#EAE6DF] bg-[#FAF8F5]">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-10">
             
             {/* Breadcrumbs */}
-            <div className="flex items-center gap-2 text-xs font-mono text-[#888888] mb-8">
-              <Link href="/" className="hover:text-[#0D9488] transition-colors flex items-center gap-1">
-                <ArrowLeft className="w-3.5 h-3.5" />
-                <span>Home</span>
+            <div className="flex items-center gap-2 text-xs font-mono text-[#7A7770] mb-8">
+              <Link href="/" className="hover:text-[#0A0A0A] transition-colors">
+                HOME
               </Link>
               <span>/</span>
-              <Link href="/#industries" className="hover:text-[#0D9488] transition-colors">
-                Industries
+              <Link href="/#industries" className="hover:text-[#0A0A0A] transition-colors">
+                SECTORS
               </Link>
               <span>/</span>
               <span className="text-[#0A0A0A] font-bold">{sector.name}</span>
@@ -299,8 +297,8 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
 
             {/* Main Sector Hero */}
             <div className="max-w-4xl space-y-6">
-              <div className="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full bg-white border border-[#E5E0D8] text-[11px] font-mono tracking-widest text-[#0D9488] uppercase font-bold">
-                <Icon className="w-3.5 h-3.5 text-[#0D9488]" />
+              <div className="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full bg-white border border-[#EAE6DF] text-[11px] font-mono tracking-widest text-[#63615A] uppercase font-bold">
+                <Icon className="w-3.5 h-3.5 text-[#0A0A0A]" />
                 <span>{sector.heroTag}</span>
               </div>
 
@@ -308,19 +306,19 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
                 {sector.headline}
               </h1>
 
-              <p className="text-base sm:text-lg text-[#555555] leading-relaxed max-w-3xl font-normal">
+              <p className="text-base sm:text-lg text-[#5A5852] leading-relaxed max-w-3xl font-normal">
                 {sector.subheadline}
               </p>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
                 <a
-                  href={`https://wa.me/919876543210?text=Inquiry%20regarding%20Clockin%20AI%20deployment%20for%20${encodeURIComponent(sector.name)}.`}
+                  href={`https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20deployment%20for%20${encodeURIComponent(sector.name)}.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-teal-primary px-8 py-3.5 text-center text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm"
+                  className="btn-teal-primary px-8 py-3.5 text-center text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg"
                 >
-                  <MessageSquare className="w-4 h-4" />
+                  <MessageSquare className="w-4 h-4 text-white" />
                   <span>Dispatch on WhatsApp</span>
                 </a>
 
@@ -328,7 +326,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
                   href="#consultation"
                   className="btn-dark-primary px-7 py-3.5 text-center text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2"
                 >
-                  <Calendar className="w-4 h-4" />
+                  <Calendar className="w-4 h-4 text-[#0A0A0A]" />
                   <span>Request Sector Blueprint</span>
                 </a>
               </div>
@@ -338,18 +336,18 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
         </section>
 
         {/* Quantified Metrics Ribbon */}
-        <section className="border-b border-[#E5E0D8] bg-white py-12">
+        <section className="border-b border-[#EAE6DF] bg-white py-12">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-10">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {sector.metrics.map((m, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#E5E0D8]">
-                  <div className="text-2xl sm:text-4xl font-extrabold text-[#0D9488] tracking-tight mb-1">
+                <div key={idx} className="p-6 rounded-2xl bg-[#FAF8F5] border border-[#EAE6DF]">
+                  <div className="text-2xl sm:text-4xl font-extrabold text-[#0A0A0A] tracking-tight mb-1">
                     {m.value}
                   </div>
-                  <div className="text-xs font-bold uppercase tracking-wider text-[#0A0A0A] mb-1 font-mono">
+                  <div className="text-xs font-bold uppercase tracking-wider text-[#1A1A1A] mb-1 font-mono">
                     {m.label}
                   </div>
-                  <div className="text-[11px] text-[#666666] leading-relaxed">
+                  <div className="text-[11px] text-[#5A5852] leading-relaxed">
                     {m.detail}
                   </div>
                 </div>
@@ -359,21 +357,21 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
         </section>
 
         {/* Operational Bottlenecks vs Clockin AI Transformation */}
-        <section className="py-20 max-w-[1400px] mx-auto px-6 sm:px-10 border-b border-[#E5E0D8]">
+        <section className="py-20 max-w-[1400px] mx-auto px-6 sm:px-10 border-b border-[#EAE6DF]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             
             {/* Left: Legacy Bottlenecks */}
-            <div className="p-8 rounded-3xl bg-[#FAF8F5] border border-[#E5E0D8] space-y-6">
-              <span className="text-[10px] font-mono tracking-widest uppercase text-[#888888] font-bold bg-white px-3 py-1 rounded-md border border-[#E5E0D8] inline-block">
+            <div className="p-8 rounded-3xl bg-[#FFF8F8] border border-red-200 space-y-6 text-[#1A1A1A]">
+              <span className="text-[10px] font-mono tracking-widest uppercase text-red-700 font-bold bg-red-100 px-3 py-1 rounded-md border border-red-200 inline-block">
                 THE OPERATIONAL BOTTLENECK
               </span>
-              <h2 className="font-extrabold text-2xl sm:text-3xl text-[#0A0A0A] tracking-tight">
+              <h2 className="font-extrabold text-2xl sm:text-3xl text-[#1A1A1A] tracking-tight">
                 Where Legacy Enterprise Systems Fail
               </h2>
               <ul className="space-y-4">
                 {sector.bottlenecks.map((b, i) => (
-                  <li key={i} className="flex items-start gap-3 text-xs sm:text-sm text-[#555555]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#EF4444] shrink-0 mt-2"></span>
+                  <li key={i} className="flex items-start gap-3 text-xs sm:text-sm text-[#5A5852]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-red-500 shrink-0 mt-2"></span>
                     <span className="leading-relaxed">{b}</span>
                   </li>
                 ))}
@@ -381,20 +379,20 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
             </div>
 
             {/* Right: Clockin AI Transformation */}
-            <div className="p-8 rounded-3xl bg-white border border-[#99F6E4] shadow-sm space-y-6">
-              <span className="text-[10px] font-mono tracking-widest uppercase text-[#0D9488] font-bold bg-[#CCFBF1] px-3 py-1 rounded-md inline-block">
+            <div className="p-8 rounded-3xl bg-white border-2 border-[#0A0A0A] shadow-xl space-y-6 text-[#0A0A0A]">
+              <span className="text-[10px] font-mono tracking-widest uppercase text-[#0A0A0A] font-bold bg-[#FAF8F5] px-3 py-1 rounded-md border border-[#EAE6DF] inline-block">
                 THE CLOCKIN AI SOLUTION
               </span>
               <h2 className="font-extrabold text-2xl sm:text-3xl text-[#0A0A0A] tracking-tight">
                 Autonomous, Deterministic Execution
               </h2>
-              <p className="text-xs sm:text-sm text-[#444444] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#5A5852] leading-relaxed">
                 {sector.transformation}
               </p>
               <div className="pt-2">
                 <a
                   href="#flowchart"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-[#0D9488] hover:text-[#0F766E] uppercase tracking-wider font-mono"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-[#0A0A0A] hover:text-[#5A5852] uppercase tracking-wider font-mono"
                 >
                   <span>Inspect Tailored Flowchart Pipeline</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -406,16 +404,16 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
         </section>
 
         {/* Sector Algorithmic Flowchart */}
-        <section id="flowchart" className="py-20 bg-[#FAF8F5] border-b border-[#E5E0D8]">
+        <section id="flowchart" className="py-20 bg-[#FAF8F5] border-b border-[#EAE6DF]">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-10">
             <div className="max-w-2xl mb-12">
-              <span className="text-[11px] font-mono tracking-widest uppercase text-[#0D9488] font-bold bg-white border border-[#E5E0D8] px-3.5 py-1 rounded-full inline-block mb-3">
+              <span className="text-[11px] font-mono tracking-widest uppercase text-[#63615A] font-bold bg-white border border-[#EAE6DF] px-3.5 py-1 rounded-full inline-block mb-3">
                 SECTOR ARCHITECTURE // FLOWCHART
               </span>
               <h2 className="font-extrabold text-3xl sm:text-4xl text-[#0A0A0A] tracking-tight">
                 {sector.name} Pipeline Flowchart
               </h2>
-              <p className="text-xs sm:text-sm text-[#666666] mt-2">
+              <p className="text-xs sm:text-sm text-[#5A5852] mt-2">
                 Deterministic sub-second pipeline moving from raw client request to atomic ERP execution.
               </p>
             </div>
@@ -423,22 +421,22 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
             {/* 4 Flowchart Pipeline Cards with Connectors */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
               {sector.flowchart.map((fc, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-2xl border border-[#E5E0D8] space-y-3 relative group">
+                <div key={idx} className="bg-white p-6 rounded-2xl border border-[#EAE6DF] space-y-3 relative group shadow-xs">
                   <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-mono font-bold bg-[#FAF8F5] text-[#0D9488] px-2 py-0.5 rounded border border-[#E5E0D8]">
+                    <span className="text-[10px] font-mono font-bold bg-[#FAF8F5] text-[#0A0A0A] px-2 py-0.5 rounded border border-[#EAE6DF]">
                       {fc.step}
                     </span>
-                    <span className="text-[10px] font-mono text-[#888888]">NODE 0{idx + 1}</span>
+                    <span className="text-[10px] font-mono text-[#7A7770]">NODE 0{idx + 1}</span>
                   </div>
                   <h3 className="font-bold text-sm text-[#0A0A0A] leading-snug">
                     {fc.title}
                   </h3>
-                  <p className="text-xs text-[#666666] leading-relaxed">
+                  <p className="text-xs text-[#5A5852] leading-relaxed">
                     {fc.desc}
                   </p>
-                  <div className="pt-3 border-t border-[#F2EFE9] flex items-center justify-between text-[10px] font-mono">
-                    <span className="text-[#888888]">Output:</span>
-                    <span className="font-bold text-[#0D9488]">{fc.output}</span>
+                  <div className="pt-3 border-t border-[#EAE6DF] flex items-center justify-between text-[10px] font-mono">
+                    <span className="text-[#7A7770]">Output:</span>
+                    <span className="font-bold text-[#0A0A0A]">{fc.output}</span>
                   </div>
                 </div>
               ))}
@@ -447,9 +445,9 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
         </section>
 
         {/* Deep Feature Specifications */}
-        <section className="py-20 max-w-[1400px] mx-auto px-6 sm:px-10 border-b border-[#E5E0D8]">
+        <section className="py-20 max-w-[1400px] mx-auto px-6 sm:px-10 border-b border-[#EAE6DF]">
           <div className="max-w-2xl mb-12">
-            <span className="text-[11px] font-mono tracking-widest uppercase text-[#0D9488] font-bold bg-[#FAF8F5] border border-[#E5E0D8] px-3.5 py-1 rounded-full inline-block mb-3">
+            <span className="text-[11px] font-mono tracking-widest uppercase text-[#63615A] font-bold bg-[#FAF8F5] border border-[#EAE6DF] px-3.5 py-1 rounded-full inline-block mb-3">
               TECHNICAL CAPABILITIES
             </span>
             <h2 className="font-extrabold text-3xl sm:text-4xl text-[#0A0A0A] tracking-tight">
@@ -459,15 +457,15 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {sector.features.map((feat, idx) => (
-              <div key={idx} className="p-7 rounded-2xl bg-white border border-[#E5E0D8] space-y-2">
-                <div className="flex items-center gap-2 text-[#0D9488] font-mono text-xs font-bold">
-                  <CheckCircle2 className="w-4 h-4 text-[#0D9488]" />
+              <div key={idx} className="p-7 rounded-2xl bg-[#FAF8F5] border border-[#EAE6DF] space-y-2">
+                <div className="flex items-center gap-2 text-[#0A0A0A] font-mono text-xs font-bold">
+                  <CheckCircle2 className="w-4 h-4 text-[#0A0A0A]" />
                   <span>SPEC 0{idx + 1}</span>
                 </div>
                 <h3 className="font-bold text-base text-[#0A0A0A]">
                   {feat.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#555555] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#5A5852] leading-relaxed">
                   {feat.desc}
                 </p>
               </div>
@@ -476,10 +474,10 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
         </section>
 
         {/* Native Systems Interoperability */}
-        <section className="py-16 bg-[#FAF8F5] border-b border-[#E5E0D8]">
+        <section className="py-16 bg-white border-b border-[#EAE6DF]">
           <div className="max-w-[1400px] mx-auto px-6 sm:px-10">
             <div className="text-center max-w-xl mx-auto mb-8">
-              <span className="text-[10px] font-mono tracking-widest uppercase text-[#0D9488] font-bold bg-white px-3 py-1 rounded-full border border-[#E5E0D8] inline-block mb-2">
+              <span className="text-[10px] font-mono tracking-widest uppercase text-[#63615A] font-bold bg-[#FAF8F5] px-3 py-1 rounded-full border border-[#EAE6DF] inline-block mb-2">
                 SYSTEM INTEROPERABILITY
               </span>
               <h2 className="font-extrabold text-2xl text-[#0A0A0A] tracking-tight">
@@ -489,17 +487,17 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
 
             <div className="flex flex-wrap items-center justify-center gap-3 max-w-4xl mx-auto">
               {sector.integrations.map((sys, idx) => (
-                <div key={idx} className="px-4 py-2.5 rounded-xl bg-white border border-[#E5E0D8] text-xs font-mono font-semibold text-[#0A0A0A] shadow-sm flex items-center gap-2">
-                  <Layers className="w-3.5 h-3.5 text-[#0D9488]" />
+                <div key={idx} className="px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] text-xs font-mono font-semibold text-[#0A0A0A] shadow-xs flex items-center gap-2">
+                  <Layers className="w-3.5 h-3.5 text-[#0A0A0A]" />
                   <span>{sys}</span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 pt-6 border-t border-[#E5E0D8] flex flex-wrap items-center justify-center gap-6 text-[11px] font-mono text-[#666666]">
+            <div className="mt-8 pt-6 border-t border-[#EAE6DF] flex flex-wrap items-center justify-center gap-6 text-[11px] font-mono text-[#5A5852]">
               {sector.compliance.map((c, idx) => (
                 <div key={idx} className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-[#0D9488]" />
+                  <ShieldCheck className="w-4 h-4 text-[#0A0A0A]" />
                   <span>{c}</span>
                 </div>
               ))}
@@ -509,8 +507,8 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
 
         {/* Consultation / Booking Section */}
         <section id="consultation" className="py-20 max-w-[1200px] mx-auto px-6 sm:px-10">
-          <div className="bg-white rounded-3xl p-8 sm:p-14 border border-[#E5E0D8] shadow-sm text-center max-w-3xl mx-auto">
-            <span className="text-[10px] font-mono tracking-widest uppercase text-[#0D9488] font-bold bg-[#FAF8F5] px-3 py-1 rounded-full border border-[#E5E0D8] inline-block mb-4">
+          <div className="bg-[#FAF8F5] rounded-3xl p-8 sm:p-14 border border-[#EAE6DF] shadow-lg text-center max-w-3xl mx-auto">
+            <span className="text-[10px] font-mono tracking-widest uppercase text-[#63615A] font-bold bg-white px-3 py-1 rounded-full border border-[#EAE6DF] inline-block mb-4">
               DEPLOYMENT INQUIRY // {sector.code}
             </span>
 
@@ -518,18 +516,18 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
               Deploy Clockin AI for {sector.name}
             </h2>
 
-            <p className="text-xs sm:text-sm text-[#666666] leading-relaxed max-w-xl mx-auto mb-8">
+            <p className="text-xs sm:text-sm text-[#5A5852] leading-relaxed max-w-xl mx-auto mb-8">
               Speak directly with an AI systems architect specializing in {sector.name.toLowerCase()} infrastructure. We deliver an operational boundary audit in 48 hours.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href={`https://wa.me/919876543210?text=Direct%20inquiry%20regarding%20Clockin%20AI%20architecture%20for%20${encodeURIComponent(sector.name)}.`}
+                href={`https://wa.me/918848563824?text=Direct%20inquiry%20regarding%20Clockin%20AI%20architecture%20for%20${encodeURIComponent(sector.name)}.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-teal-primary w-full sm:w-auto px-8 py-3.5 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm"
+                className="btn-teal-primary w-full sm:w-auto px-8 py-3.5 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg"
               >
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4 text-white" />
                 <span>Chat with Sector Lead on WhatsApp</span>
               </a>
 
@@ -537,7 +535,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
                 href="/#industries"
                 className="btn-dark-primary w-full sm:w-auto px-8 py-3.5 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2"
               >
-                <ArrowLeft className="w-4 h-4" />
+                <ArrowLeft className="w-4 h-4 text-[#0A0A0A]" />
                 <span>Back to All Sectors</span>
               </Link>
             </div>
@@ -547,7 +545,6 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
       </main>
 
       <Footer />
-      <FloatingWhatsApp phoneNumber="919876543210" />
     </div>
   );
 }

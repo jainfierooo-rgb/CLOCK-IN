@@ -58,9 +58,9 @@ const loopSteps: LoopStep[] = [
     tag: 'Deterministic Neural Core',
     cx: 270,
     cy: 270,
-    desc: 'Fine-tunes specialized domain models equipped with deterministic guardrails that eliminate hallucination and deliver sub-25ms response speeds.',
+    desc: 'Fine-tunes specialized domain models equipped with deterministic guardrails that eliminate hallucination and deliver real-time response speeds.',
     detail: 'Lightweight, ultra-fast domain models running in private cryptographic hardware enclaves.',
-    inputs: ['Knowledge Graph', 'Context Graph', 'Deterministic Safety Bounds', 'Sub-25ms Hardware Optimizations'],
+    inputs: ['Knowledge Graph', 'Context Graph', 'Deterministic Safety Bounds', 'Real-Time Latency Optimizations'],
     output: 'Calibrated Domain SLM Weights',
   },
   {
@@ -96,7 +96,9 @@ export default function ProcessWorkflow() {
   const activeStep = loopSteps.find((s) => s.id === activeId) || loopSteps[2];
 
   return (
-    <section id="flowchart" className="py-28 sm:py-36 bg-[#FAF8F5] text-[#0A0A0A] border-y border-[#E5E0D8] overflow-hidden">
+    <section id="flowchart" className="py-28 sm:py-36 bg-[#FAF8F5] text-[#0A0A0A] border-y border-[#EAE6DF] overflow-hidden relative">
+      <div id="architecture" className="absolute -top-24 left-0 pointer-events-none" />
+      <div id="process" className="absolute -top-24 left-0 pointer-events-none" />
       <div className="max-w-[1400px] mx-auto px-6 sm:px-12">
         
         {/* Section Header */}
@@ -107,8 +109,8 @@ export default function ProcessWorkflow() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-4xl mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#E5E0D8] text-[10px] font-mono tracking-widest uppercase text-[#0D9488] font-bold mb-4 shadow-2xs">
-            <GitBranch className="w-3.5 h-3.5 text-[#0D9488]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#EAE6DF] text-[10px] font-mono tracking-widest uppercase text-[#63615A] font-bold mb-4 shadow-2xs">
+            <GitBranch className="w-3.5 h-3.5 text-[#0A0A0A]" />
             <span>NEURAL INFRASTRUCTURE // THE CLOCKIN SLM LOOP</span>
           </div>
 
@@ -116,43 +118,43 @@ export default function ProcessWorkflow() {
             Agentic. Autonomous. Self-Reinforcing.
           </h2>
 
-          <p className="text-sm sm:text-base lg:text-lg text-[#555555] leading-relaxed font-normal max-w-3xl">
+          <p className="text-sm sm:text-base lg:text-lg text-[#5A5852] leading-relaxed font-normal max-w-3xl">
             A closed-loop autonomous intelligence architecture. We ingest fragmented enterprise data, construct dynamic context graphs, fine-tune domain-specific Small Language Models (SLMs), and compound valuation by 101× through continuous evaluation.
           </p>
         </motion.div>
 
-        {/* Master Dark Pine Architecture Engine Container */}
+        {/* Master OpenAI Architecture Engine Container */}
         <motion.div 
           initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-[#071715] rounded-3xl p-6 sm:p-10 lg:p-14 border border-[#163832] shadow-2xl mb-20 relative overflow-hidden text-white"
+          className="bg-[#0A0A0A] rounded-3xl p-6 sm:p-10 lg:p-14 border border-white/10 shadow-2xl mb-20 relative overflow-hidden text-white"
         >
           
           {/* Subtle Technical Grid Background */}
           <div 
-            className="absolute inset-0 opacity-[0.06] pointer-events-none"
+            className="absolute inset-0 opacity-[0.04] pointer-events-none"
             style={{
-              backgroundImage: 'linear-gradient(to right, #2DD4BF 1px, transparent 1px), linear-gradient(to bottom, #2DD4BF 1px, transparent 1px)',
+              backgroundImage: 'linear-gradient(to right, #FFFFFF 1px, transparent 1px), linear-gradient(to bottom, #FFFFFF 1px, transparent 1px)',
               backgroundSize: '36px 36px',
             }}
           />
 
           {/* Top Architecture Meta Toolbar */}
-          <div className="flex flex-wrap items-center justify-between pb-8 mb-8 border-b border-[#163832] relative z-10 text-xs font-mono">
+          <div className="flex flex-wrap items-center justify-between pb-8 mb-8 border-b border-white/10 relative z-10 text-xs font-mono">
             <div className="flex items-center gap-3">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#2DD4BF] animate-pulse"></span>
-              <span className="font-bold text-[#E6FFFA] tracking-wider uppercase">
+              <span className="w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)] animate-pulse"></span>
+              <span className="font-bold text-white tracking-wider uppercase">
                 CLOSED-LOOP SLM ORBITAL ENGINE // INDIA CLUSTER
               </span>
             </div>
             
             <button
               onClick={() => setLightboxOpen(true)}
-              className="mt-2 sm:mt-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0F2924] hover:bg-[#163E37] border border-[#23564D] text-[11px] text-[#2DD4BF] font-mono font-semibold transition-colors cursor-pointer"
+              className="mt-2 sm:mt-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/15 text-[11px] text-neutral-200 font-mono font-semibold transition-colors cursor-pointer"
             >
-              <Maximize2 className="w-3.5 h-3.5" />
+              <Maximize2 className="w-3.5 h-3.5 text-white" />
               <span>Expand High-Res Schematic</span>
             </button>
           </div>
@@ -169,15 +171,15 @@ export default function ProcessWorkflow() {
                   className="w-full h-full drop-shadow-2xl overflow-visible"
                 >
                   <defs>
-                    {/* Gradients */}
+                    {/* Monochrome Gradients */}
                     <radialGradient id="slmGlow" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stopColor="#2DD4BF" stopOpacity="0.9" />
-                      <stop offset="60%" stopColor="#0D9488" stopOpacity="0.75" />
-                      <stop offset="100%" stopColor="#08332E" stopOpacity="0.9" />
+                      <stop offset="0%" stopColor="#FFFFFF" stopOpacity="1" />
+                      <stop offset="60%" stopColor="#E5E5E5" stopOpacity="0.95" />
+                      <stop offset="100%" stopColor="#888888" stopOpacity="0.9" />
                     </radialGradient>
                     <radialGradient id="outerRingGlow" cx="50%" cy="50%" r="50%">
                       <stop offset="70%" stopColor="transparent" />
-                      <stop offset="100%" stopColor="#0D9488" stopOpacity="0.2" />
+                      <stop offset="100%" stopColor="rgba(255,255,255,0.06)" />
                     </radialGradient>
                     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
                       <feGaussianBlur stdDeviation="6" result="blur" />
@@ -191,7 +193,7 @@ export default function ProcessWorkflow() {
                     cy="270" 
                     r="160" 
                     fill="url(#outerRingGlow)" 
-                    stroke="#163832" 
+                    stroke="rgba(255,255,255,0.12)" 
                     strokeWidth="2" 
                   />
                   
@@ -201,7 +203,7 @@ export default function ProcessWorkflow() {
                     cy="270" 
                     r="160" 
                     fill="none" 
-                    stroke="#2DD4BF" 
+                    stroke="rgba(255,255,255,0.85)" 
                     strokeWidth="2.5" 
                     strokeDasharray="8 6" 
                     className="animate-spin"
@@ -214,30 +216,30 @@ export default function ProcessWorkflow() {
                     cy="270" 
                     r="105" 
                     fill="none" 
-                    stroke="#163832" 
+                    stroke="rgba(255,255,255,0.12)" 
                     strokeWidth="1.5" 
                     strokeDasharray="4 4" 
                   />
 
                   {/* Bi-Directional Connectors from Orbit to Center */}
                   {/* Top to Center */}
-                  <line x1="270" y1="160" x2="270" y2="215" stroke="#2DD4BF" strokeWidth="2" strokeDasharray="3 3" />
+                  <line x1="270" y1="160" x2="270" y2="215" stroke="rgba(255,255,255,0.35)" strokeWidth="2" strokeDasharray="3 3" />
                   {/* Bottom to Center */}
-                  <line x1="270" y1="380" x2="270" y2="325" stroke="#2DD4BF" strokeWidth="2" strokeDasharray="3 3" />
+                  <line x1="270" y1="380" x2="270" y2="325" stroke="rgba(255,255,255,0.35)" strokeWidth="2" strokeDasharray="3 3" />
                   {/* Left to Center */}
-                  <line x1="160" y1="270" x2="215" y2="270" stroke="#2DD4BF" strokeWidth="2" strokeDasharray="3 3" />
+                  <line x1="160" y1="270" x2="215" y2="270" stroke="rgba(255,255,255,0.35)" strokeWidth="2" strokeDasharray="3 3" />
                   {/* Right to Center */}
-                  <line x1="380" y1="270" x2="325" y2="270" stroke="#2DD4BF" strokeWidth="2" strokeDasharray="3 3" />
+                  <line x1="380" y1="270" x2="325" y2="270" stroke="rgba(255,255,255,0.35)" strokeWidth="2" strokeDasharray="3 3" />
 
                   {/* Directional Flow Arrows around the Ring */}
                   {/* Top-Right Arrow */}
-                  <polygon points="385,150 375,142 375,158" fill="#2DD4BF" transform="rotate(45 385 150)" />
+                  <polygon points="385,150 375,142 375,158" fill="#FFFFFF" transform="rotate(45 385 150)" />
                   {/* Bottom-Right Arrow */}
-                  <polygon points="385,390 375,382 375,398" fill="#2DD4BF" transform="rotate(135 385 390)" />
+                  <polygon points="385,390 375,382 375,398" fill="#FFFFFF" transform="rotate(135 385 390)" />
                   {/* Bottom-Left Arrow */}
-                  <polygon points="155,390 145,382 145,398" fill="#2DD4BF" transform="rotate(225 155 390)" />
+                  <polygon points="155,390 145,382 145,398" fill="#FFFFFF" transform="rotate(225 155 390)" />
                   {/* Top-Left Arrow */}
-                  <polygon points="155,150 145,142 145,158" fill="#2DD4BF" transform="rotate(315 155 150)" />
+                  <polygon points="155,150 145,142 145,158" fill="#FFFFFF" transform="rotate(315 155 150)" />
 
                   {/* Center Node: DOMAIN SLMs (Node 3) */}
                   <g 
@@ -246,17 +248,17 @@ export default function ProcessWorkflow() {
                     style={{ transformOrigin: '270px 270px' }}
                   >
                     {activeId === 3 && (
-                      <circle cx="270" cy="270" r="66" fill="none" stroke="#2DD4BF" strokeWidth="2" filter="url(#glow)" />
+                      <circle cx="270" cy="270" r="66" fill="none" stroke="#FFFFFF" strokeWidth="2" filter="url(#glow)" />
                     )}
-                    <circle cx="270" cy="270" r="56" fill="url(#slmGlow)" stroke="#5EEAD4" strokeWidth="2.5" />
-                    <text x="270" y="264" textAnchor="middle" fill="#FFFFFF" fontSize="13" fontWeight="800" letterSpacing="1" fontFamily="var(--font-sans), sans-serif">
+                    <circle cx="270" cy="270" r="56" fill="url(#slmGlow)" stroke="#FFFFFF" strokeWidth="2.5" />
+                    <text x="270" y="264" textAnchor="middle" fill="#000000" fontSize="13" fontWeight="900" letterSpacing="1" fontFamily="var(--font-sans), sans-serif">
                       DOMAIN
                     </text>
-                    <text x="270" y="282" textAnchor="middle" fill="#FFFFFF" fontSize="13" fontWeight="800" letterSpacing="1" fontFamily="var(--font-sans), sans-serif">
+                    <text x="270" y="282" textAnchor="middle" fill="#000000" fontSize="13" fontWeight="900" letterSpacing="1" fontFamily="var(--font-sans), sans-serif">
                       SLMs
                     </text>
-                    <circle cx="295" cy="245" r="10" fill="#0A0A0A" stroke="#2DD4BF" strokeWidth="1.5" />
-                    <text x="295" y="249" textAnchor="middle" fill="#2DD4BF" fontSize="10" fontWeight="bold" fontFamily="monospace">
+                    <circle cx="295" cy="245" r="10" fill="#000000" stroke="#FFFFFF" strokeWidth="1.5" />
+                    <text x="295" y="249" textAnchor="middle" fill="#FFFFFF" fontSize="10" fontWeight="bold" fontFamily="monospace">
                       3
                     </text>
                   </g>
@@ -268,17 +270,17 @@ export default function ProcessWorkflow() {
                     style={{ transformOrigin: '270px 110px' }}
                   >
                     {activeId === 4 && (
-                      <circle cx="270" cy="110" r="54" fill="none" stroke="#2DD4BF" strokeWidth="2" filter="url(#glow)" />
+                      <circle cx="270" cy="110" r="54" fill="none" stroke="#FFFFFF" strokeWidth="2" filter="url(#glow)" />
                     )}
-                    <circle cx="270" cy="110" r="46" fill="#0C2622" stroke={activeId === 4 ? '#2DD4BF' : '#23564D'} strokeWidth="2" />
-                    <text x="270" y="106" textAnchor="middle" fill="#E6FFFA" fontSize="9.5" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
+                    <circle cx="270" cy="110" r="46" fill="#141416" stroke={activeId === 4 ? '#FFFFFF' : 'rgba(255,255,255,0.2)'} strokeWidth="2" />
+                    <text x="270" y="106" textAnchor="middle" fill="#FFFFFF" fontSize="9.5" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
                       AGENTIC
                     </text>
-                    <text x="270" y="120" textAnchor="middle" fill="#E6FFFA" fontSize="9.5" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
+                    <text x="270" y="120" textAnchor="middle" fill="#FFFFFF" fontSize="9.5" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
                       WORKFLOWS
                     </text>
-                    <circle cx="295" cy="85" r="9" fill="#0A0A0A" stroke="#2DD4BF" strokeWidth="1.5" />
-                    <text x="295" y="88.5" textAnchor="middle" fill="#2DD4BF" fontSize="9.5" fontWeight="bold" fontFamily="monospace">
+                    <circle cx="295" cy="85" r="9" fill="#000000" stroke={activeId === 4 ? '#FFFFFF' : 'rgba(255,255,255,0.3)'} strokeWidth="1.5" />
+                    <text x="295" y="88.5" textAnchor="middle" fill="#FFFFFF" fontSize="9.5" fontWeight="bold" fontFamily="monospace">
                       4
                     </text>
                   </g>
@@ -290,17 +292,17 @@ export default function ProcessWorkflow() {
                     style={{ transformOrigin: '430px 270px' }}
                   >
                     {activeId === 5 && (
-                      <circle cx="430" cy="270" r="54" fill="none" stroke="#2DD4BF" strokeWidth="2" filter="url(#glow)" />
+                      <circle cx="430" cy="270" r="54" fill="none" stroke="#FFFFFF" strokeWidth="2" filter="url(#glow)" />
                     )}
-                    <circle cx="430" cy="270" r="46" fill="#0C2622" stroke={activeId === 5 ? '#2DD4BF' : '#23564D'} strokeWidth="2" />
-                    <text x="430" y="266" textAnchor="middle" fill="#E6FFFA" fontSize="9" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
+                    <circle cx="430" cy="270" r="46" fill="#141416" stroke={activeId === 5 ? '#FFFFFF' : 'rgba(255,255,255,0.2)'} strokeWidth="2" />
+                    <text x="430" y="266" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
                       AUTONOMOUS
                     </text>
-                    <text x="430" y="280" textAnchor="middle" fill="#E6FFFA" fontSize="9" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
+                    <text x="430" y="280" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
                       EVALS
                     </text>
-                    <circle cx="455" cy="245" r="9" fill="#0A0A0A" stroke="#2DD4BF" strokeWidth="1.5" />
-                    <text x="455" y="248.5" textAnchor="middle" fill="#2DD4BF" fontSize="9.5" fontWeight="bold" fontFamily="monospace">
+                    <circle cx="455" cy="245" r="9" fill="#000000" stroke={activeId === 5 ? '#FFFFFF' : 'rgba(255,255,255,0.3)'} strokeWidth="1.5" />
+                    <text x="455" y="248.5" textAnchor="middle" fill="#FFFFFF" fontSize="9.5" fontWeight="bold" fontFamily="monospace">
                       5
                     </text>
                   </g>
@@ -312,17 +314,17 @@ export default function ProcessWorkflow() {
                     style={{ transformOrigin: '270px 430px' }}
                   >
                     {activeId === 1 && (
-                      <circle cx="270" cy="430" r="54" fill="none" stroke="#2DD4BF" strokeWidth="2" filter="url(#glow)" />
+                      <circle cx="270" cy="430" r="54" fill="none" stroke="#FFFFFF" strokeWidth="2" filter="url(#glow)" />
                     )}
-                    <circle cx="270" cy="430" r="46" fill="#0C2622" stroke={activeId === 1 ? '#2DD4BF' : '#23564D'} strokeWidth="2" />
-                    <text x="270" y="426" textAnchor="middle" fill="#E6FFFA" fontSize="9" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
+                    <circle cx="270" cy="430" r="46" fill="#141416" stroke={activeId === 1 ? '#FFFFFF' : 'rgba(255,255,255,0.2)'} strokeWidth="2" />
+                    <text x="270" y="426" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
                       FRAGMENTED
                     </text>
-                    <text x="270" y="440" textAnchor="middle" fill="#E6FFFA" fontSize="9" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
+                    <text x="270" y="440" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
                       DATA
                     </text>
-                    <circle cx="295" cy="405" r="9" fill="#0A0A0A" stroke="#2DD4BF" strokeWidth="1.5" />
-                    <text x="295" y="408.5" textAnchor="middle" fill="#2DD4BF" fontSize="9.5" fontWeight="bold" fontFamily="monospace">
+                    <circle cx="295" cy="405" r="9" fill="#000000" stroke={activeId === 1 ? '#FFFFFF' : 'rgba(255,255,255,0.3)'} strokeWidth="1.5" />
+                    <text x="295" y="408.5" textAnchor="middle" fill="#FFFFFF" fontSize="9.5" fontWeight="bold" fontFamily="monospace">
                       1
                     </text>
                   </g>
@@ -334,17 +336,17 @@ export default function ProcessWorkflow() {
                     style={{ transformOrigin: '110px 270px' }}
                   >
                     {activeId === 2 && (
-                      <circle cx="110" cy="270" r="54" fill="none" stroke="#2DD4BF" strokeWidth="2" filter="url(#glow)" />
+                      <circle cx="110" cy="270" r="54" fill="none" stroke="#FFFFFF" strokeWidth="2" filter="url(#glow)" />
                     )}
-                    <circle cx="110" cy="270" r="46" fill="#0C2622" stroke={activeId === 2 ? '#2DD4BF' : '#23564D'} strokeWidth="2" />
-                    <text x="110" y="266" textAnchor="middle" fill="#E6FFFA" fontSize="9" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
+                    <circle cx="110" cy="270" r="46" fill="#141416" stroke={activeId === 2 ? '#FFFFFF' : 'rgba(255,255,255,0.2)'} strokeWidth="2" />
+                    <text x="110" y="266" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
                       PROCESS &amp;
                     </text>
-                    <text x="110" y="280" textAnchor="middle" fill="#E6FFFA" fontSize="9" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
+                    <text x="110" y="280" textAnchor="middle" fill="#FFFFFF" fontSize="9" fontWeight="700" letterSpacing="0.8" fontFamily="var(--font-sans), sans-serif">
                       WORKFLOW
                     </text>
-                    <circle cx="135" cy="245" r="9" fill="#0A0A0A" stroke="#2DD4BF" strokeWidth="1.5" />
-                    <text x="135" y="248.5" textAnchor="middle" fill="#2DD4BF" fontSize="9.5" fontWeight="bold" fontFamily="monospace">
+                    <circle cx="135" cy="245" r="9" fill="#000000" stroke={activeId === 2 ? '#FFFFFF' : 'rgba(255,255,255,0.3)'} strokeWidth="1.5" />
+                    <text x="135" y="248.5" textAnchor="middle" fill="#FFFFFF" fontSize="9.5" fontWeight="bold" fontFamily="monospace">
                       2
                     </text>
                   </g>
@@ -352,7 +354,7 @@ export default function ProcessWorkflow() {
                 </svg>
 
                 {/* Sub-label under diagram */}
-                <div className="text-center text-[10px] font-mono text-[#2DD4BF]/70 uppercase tracking-widest pt-2">
+                <div className="text-center text-[10px] font-mono text-neutral-500 uppercase tracking-widest pt-2">
                   CLICK ANY NODE (1 &ndash; 5) TO INSPECT PIPELINE
                 </div>
               </div>
@@ -362,8 +364,8 @@ export default function ProcessWorkflow() {
             <div className="lg:col-span-6 space-y-4">
               
               {/* Glassmorphic Header Card */}
-              <div className="bg-[#0C221E]/90 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-[#1E4D44] shadow-lg">
-                <div className="text-xs font-mono font-bold tracking-wider uppercase text-[#2DD4BF] mb-2">
+              <div className="bg-[#0F0F12]/90 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white/10 shadow-xl">
+                <div className="text-xs font-mono font-bold tracking-wider uppercase text-neutral-400 mb-2">
                   AGENTIC // AUTONOMOUS // SELF-REINFORCING
                 </div>
                 
@@ -381,13 +383,13 @@ export default function ProcessWorkflow() {
                         onClick={() => setActiveId(step.id)}
                         className={`w-full text-left p-3.5 sm:p-4 rounded-xl transition-all duration-300 flex items-start gap-4 border cursor-pointer ${
                           isSelected
-                            ? 'bg-[#143B33] border-[#2DD4BF] shadow-md ring-1 ring-[#2DD4BF]/30'
-                            : 'bg-[#0A1D1A]/70 border-[#163832] hover:bg-[#112E28] hover:border-[#23564D]'
+                            ? 'bg-white/[0.08] border-white shadow-md ring-1 ring-white/30'
+                            : 'bg-white/[0.02] border-white/10 hover:bg-white/[0.05] hover:border-white/20'
                         }`}
                       >
                         {/* Step Number Circle */}
                         <div className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center font-mono font-extrabold text-xs transition-colors ${
-                          isSelected ? 'bg-[#2DD4BF] text-[#071715]' : 'bg-[#163832] text-[#2DD4BF]'
+                          isSelected ? 'bg-white text-black' : 'bg-white/10 text-neutral-400'
                         }`}>
                           {step.id}
                         </div>
@@ -395,7 +397,7 @@ export default function ProcessWorkflow() {
                         {/* Title & Detail */}
                         <div className="space-y-1">
                           <div className={`text-xs sm:text-sm font-bold leading-snug transition-colors ${
-                            isSelected ? 'text-white' : 'text-[#D1E8E4]'
+                            isSelected ? 'text-white' : 'text-neutral-300'
                           }`}>
                             {step.title}
                           </div>
@@ -404,7 +406,7 @@ export default function ProcessWorkflow() {
                             <motion.p 
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: 'auto' }}
-                              className="text-xs text-[#99D5CA] leading-relaxed pt-1"
+                              className="text-xs text-neutral-400 leading-relaxed pt-1"
                             >
                               {step.desc}
                             </motion.p>
@@ -422,13 +424,13 @@ export default function ProcessWorkflow() {
           </div>
 
           {/* Active Node Bottom Inspector Strip */}
-          <div className="mt-10 pt-8 border-t border-[#163832] grid grid-cols-1 md:grid-cols-12 gap-6 items-center text-xs font-mono">
+          <div className="mt-10 pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-12 gap-6 items-center text-xs font-mono">
             <div className="md:col-span-4 flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-[#143B33] text-[#2DD4BF] flex items-center justify-center font-bold">
+              <div className="w-8 h-8 rounded-lg bg-white/10 text-white flex items-center justify-center font-bold">
                 0{activeStep.id}
               </div>
               <div>
-                <div className="text-[10px] text-[#2DD4BF] uppercase tracking-wider font-bold">
+                <div className="text-[10px] text-neutral-400 uppercase tracking-wider font-bold">
                   {activeStep.tag}
                 </div>
                 <div className="font-bold text-white text-sm">
@@ -437,12 +439,12 @@ export default function ProcessWorkflow() {
               </div>
             </div>
 
-            <div className="md:col-span-5 text-[#99D5CA] leading-relaxed">
+            <div className="md:col-span-5 text-neutral-300 leading-relaxed">
               {activeStep.detail}
             </div>
 
             <div className="md:col-span-3 flex md:justify-end">
-              <div className="px-3.5 py-1.5 rounded-lg bg-[#0F2924] border border-[#23564D] text-[#2DD4BF] text-[11px] font-bold">
+              <div className="px-3.5 py-1.5 rounded-lg bg-white/5 border border-white/15 text-neutral-200 text-[11px] font-bold">
                 OUT: {activeStep.output}
               </div>
             </div>
@@ -454,7 +456,7 @@ export default function ProcessWorkflow() {
         <div className="space-y-8">
           
           <div className="max-w-2xl">
-            <div className="text-[11px] font-mono tracking-widest uppercase text-[#888888] font-bold mb-2">
+            <div className="text-[11px] font-mono tracking-widest uppercase text-[#6A6862] font-bold mb-2">
               FLOW COMPARISON // DUAL BRANCH ARCHITECTURE
             </div>
             <h3 className="font-extrabold text-2xl sm:text-4xl text-[#0A0A0A] tracking-tight">
@@ -470,64 +472,64 @@ export default function ProcessWorkflow() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-white rounded-3xl p-8 sm:p-10 border border-[#FECACA] relative flex flex-col justify-between space-y-6 shadow-sm"
+              className="bg-[#FFF8F8] rounded-3xl p-8 sm:p-10 border border-red-200 relative flex flex-col justify-between space-y-6 shadow-md text-[#1A1A1A]"
             >
               <div className="space-y-4">
-                <div className="flex items-center justify-between pb-4 border-b border-[#FEE2E2]">
-                  <span className="text-[10px] font-mono uppercase tracking-widest bg-[#FEF2F2] text-[#DC2626] px-3 py-1 rounded-full font-bold border border-[#FECACA]">
+                <div className="flex items-center justify-between pb-4 border-b border-red-200">
+                  <span className="text-[10px] font-mono uppercase tracking-widest bg-red-100 text-red-700 px-3 py-1 rounded-full font-bold border border-red-200">
                     BRANCH A // THE STATUS QUO
                   </span>
-                  <span className="text-xs font-mono text-[#DC2626] font-bold">
+                  <span className="text-xs font-mono text-red-700 font-bold">
                     HIGH FRICTION &bull; CHOKED LATENCY
                   </span>
                 </div>
 
-                <h4 className="font-extrabold text-xl sm:text-2xl text-[#0A0A0A] tracking-tight">
+                <h4 className="font-extrabold text-xl sm:text-2xl text-[#1A1A1A] tracking-tight">
                   Why traditional enterprise operations stall
                 </h4>
 
-                <p className="text-xs sm:text-sm text-[#666666] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#5A5852] leading-relaxed">
                   Legacy organizations route requests through disconnected human queues, manual spreadsheet entry, and siloed software interfaces.
                 </p>
 
                 {/* Drawn Chokepoint Nodes */}
                 <div className="space-y-3 pt-2">
-                  <div className="p-4 rounded-xl bg-[#FEF2F2]/60 border border-[#FEE2E2] flex items-start gap-3">
-                    <XCircle className="w-4 h-4 text-[#DC2626] shrink-0 mt-0.5" />
+                  <div className="p-4 rounded-xl bg-white border border-red-100 flex items-start gap-3 shadow-2xs">
+                    <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <div className="space-y-0.5">
-                      <div className="text-xs font-bold text-[#0A0A0A]">Front Desk Phone Queues Exceeding 30 Minutes</div>
-                      <div className="text-[11px] text-[#666666]">VIP arrival surges result in lost bookings, dropped calls, and frustrated guests.</div>
+                      <div className="text-xs font-bold text-[#1A1A1A]">Front Desk Phone Queues Exceeding 30 Minutes</div>
+                      <div className="text-[11px] text-[#5A5852]">VIP arrival surges result in lost bookings, dropped calls, and frustrated guests.</div>
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-[#FEF2F2]/60 border border-[#FEE2E2] flex items-start gap-3">
-                    <XCircle className="w-4 h-4 text-[#DC2626] shrink-0 mt-0.5" />
+                  <div className="p-4 rounded-xl bg-white border border-red-100 flex items-start gap-3 shadow-2xs">
+                    <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <div className="space-y-0.5">
-                      <div className="text-xs font-bold text-[#0A0A0A]">Nurses &amp; Doctors Spending 3+ Hours on Manual EHR Scheduling</div>
-                      <div className="text-[11px] text-[#666666]">Severe clinical burnout and scheduling errors driving 28%+ appointment no-shows.</div>
+                      <div className="text-xs font-bold text-[#1A1A1A]">Nurses &amp; Doctors Spending 3+ Hours on Manual EHR Scheduling</div>
+                      <div className="text-[11px] text-[#5A5852]">Severe clinical burnout and scheduling errors driving 28%+ appointment no-shows.</div>
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-[#FEF2F2]/60 border border-[#FEE2E2] flex items-start gap-3">
-                    <XCircle className="w-4 h-4 text-[#DC2626] shrink-0 mt-0.5" />
+                  <div className="p-4 rounded-xl bg-white border border-red-100 flex items-start gap-3 shadow-2xs">
+                    <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <div className="space-y-0.5">
-                      <div className="text-xs font-bold text-[#0A0A0A]">Unplanned Plant Machine Downtime Costing $22,000 / Hour</div>
-                      <div className="text-[11px] text-[#666666]">Technicians scramble through 800-page paper binders to diagnose fault codes.</div>
+                      <div className="text-xs font-bold text-[#1A1A1A]">Unplanned Plant Machine Downtime Costing $22,000 / Hour</div>
+                      <div className="text-[11px] text-[#5A5852]">Technicians scramble through 800-page paper binders to diagnose fault codes.</div>
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-[#FEF2F2]/60 border border-[#FEE2E2] flex items-start gap-3">
-                    <XCircle className="w-4 h-4 text-[#DC2626] shrink-0 mt-0.5" />
+                  <div className="p-4 rounded-xl bg-white border border-red-100 flex items-start gap-3 shadow-2xs">
+                    <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                     <div className="space-y-0.5">
-                      <div className="text-xs font-bold text-[#0A0A0A]">Standard Public LLMs Hallucinating Critical Data</div>
-                      <div className="text-[11px] text-[#666666]">Consumer chatbots invent false room rates, medical instructions, and pricing.</div>
+                      <div className="text-xs font-bold text-[#1A1A1A]">Standard Public LLMs Hallucinating Critical Data</div>
+                      <div className="text-[11px] text-[#5A5852]">Consumer chatbots invent false room rates, medical instructions, and pricing.</div>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Chokepoint Outcome Badge */}
-              <div className="p-4 rounded-xl bg-[#FEF2F2] border border-[#FECACA] text-xs font-mono text-[#991B1B] text-center font-bold">
+              <div className="p-4 rounded-xl bg-red-100 border border-red-200 text-xs font-mono text-red-800 text-center font-bold">
                 RESULT: Operational Attrition, Lost Revenue &amp; High Overhead
               </div>
             </motion.div>
@@ -538,15 +540,15 @@ export default function ProcessWorkflow() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-white rounded-3xl p-8 sm:p-10 border border-[#99F6E4] shadow-md relative flex flex-col justify-between space-y-6"
+              className="bg-white rounded-3xl p-8 sm:p-10 border-2 border-[#0A0A0A] shadow-xl relative flex flex-col justify-between space-y-6 text-[#0A0A0A]"
             >
               <div className="space-y-4">
-                <div className="flex items-center justify-between pb-4 border-b border-[#CCFBF1]">
-                  <span className="text-[10px] font-mono uppercase tracking-widest bg-[#CCFBF1] text-[#0F766E] px-3 py-1 rounded-full font-bold border border-[#99F6E4]">
+                <div className="flex items-center justify-between pb-4 border-b border-[#EAE6DF]">
+                  <span className="text-[10px] font-mono uppercase tracking-widest bg-[#FAF8F5] text-[#0A0A0A] px-3 py-1 rounded-full font-bold border border-[#EAE6DF]">
                     BRANCH B // THE CLOCKIN AI MULTIPLIER
                   </span>
-                  <span className="text-xs font-mono text-[#0D9488] font-bold">
-                    22MS AUTONOMOUS HIGHWAY
+                  <span className="text-xs font-mono text-[#0A0A0A] font-bold">
+                    REAL-TIME AUTONOMOUS HIGHWAY
                   </span>
                 </div>
 
@@ -554,48 +556,48 @@ export default function ProcessWorkflow() {
                   Turnkey production intelligence in 21 days
                 </h4>
 
-                <p className="text-xs sm:text-sm text-[#444444] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#5A5852] leading-relaxed">
                   Clockin AI replaces human friction nodes with deterministic neural pipelines synchronized directly with your underlying enterprise databases.
                 </p>
 
                 {/* Drawn Highway Nodes */}
                 <div className="space-y-3 pt-2">
-                  <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8] flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-[#0D9488] shrink-0 mt-0.5" />
+                  <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-start gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-[#0A0A0A] shrink-0 mt-0.5" />
                     <div className="space-y-0.5">
                       <div className="text-xs font-bold text-[#0A0A0A]">24/7 Instant VIP WhatsApp Concierge &bull; 1.4s Resolution</div>
-                      <div className="text-[11px] text-[#666666]">Direct Opera PMS &amp; Cloudbeds sync confirms bookings and captures +34% spend.</div>
+                      <div className="text-[11px] text-[#5A5852]">Direct Opera PMS &amp; Cloudbeds sync confirms bookings and captures +34% spend.</div>
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8] flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-[#0D9488] shrink-0 mt-0.5" />
+                  <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-start gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-[#0A0A0A] shrink-0 mt-0.5" />
                     <div className="space-y-0.5">
                       <div className="text-xs font-bold text-[#0A0A0A]">Cryptographic Zero-Retention HIPAA Enclave</div>
-                      <div className="text-[11px] text-[#666666]">Instant intake scheduling cuts patient no-shows by 45% with 0% data leakage.</div>
+                      <div className="text-[11px] text-[#5A5852]">Instant intake scheduling cuts patient no-shows by 45% with 0% data leakage.</div>
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8] flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-[#0D9488] shrink-0 mt-0.5" />
+                  <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-start gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-[#0A0A0A] shrink-0 mt-0.5" />
                     <div className="space-y-0.5">
                       <div className="text-xs font-bold text-[#0A0A0A]">High-Speed Edge Vision Quality Inspection &bull; 1,200 Parts / Min</div>
-                      <div className="text-[11px] text-[#666666]">Conversational SOP diagnostics eliminate downtime and auto-draft SAP purchase orders.</div>
+                      <div className="text-[11px] text-[#5A5852]">Conversational SOP diagnostics eliminate downtime and auto-draft SAP purchase orders.</div>
                     </div>
                   </div>
 
-                  <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#E5E0D8] flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-[#0D9488] shrink-0 mt-0.5" />
+                  <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex items-start gap-3">
+                    <CheckCircle2 className="w-4 h-4 text-[#0A0A0A] shrink-0 mt-0.5" />
                     <div className="space-y-0.5">
                       <div className="text-xs font-bold text-[#0A0A0A]">Deterministic Mathematical Guardrails &bull; 0.00% Hallucination</div>
-                      <div className="text-[11px] text-[#666666]">Zero technical burden on internal IT: our applied team audits, tunes, and deploys.</div>
+                      <div className="text-[11px] text-[#5A5852]">Zero technical burden on internal IT: our applied team audits, tunes, and deploys.</div>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Multiplier Outcome Badge */}
-              <div className="p-4 rounded-xl bg-[#CCFBF1] border border-[#99F6E4] text-xs font-mono text-[#0F766E] text-center font-bold">
+              <div className="p-4 rounded-xl bg-[#0A0A0A] text-white text-xs font-mono text-center font-extrabold border border-[#0A0A0A]">
                 RESULT: 101× Enterprise Valuation Compounded in 21 Days
               </div>
             </motion.div>
@@ -614,27 +616,27 @@ export default function ProcessWorkflow() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setLightboxOpen(false)}
-            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-lg flex items-center justify-center p-4 sm:p-8"
+            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-2xl flex items-center justify-center p-4 sm:p-8"
           >
             <motion.div 
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-5xl w-full bg-[#071715] rounded-3xl overflow-hidden border border-[#163832] p-4 sm:p-6"
+              className="relative max-w-5xl w-full bg-[#0A0A0A] rounded-3xl overflow-hidden border border-white/15 p-4 sm:p-6"
             >
               <button
                 onClick={() => setLightboxOpen(false)}
-                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black transition-colors"
+                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="text-xs font-mono text-[#2DD4BF] uppercase tracking-widest mb-3 font-bold">
+              <div className="text-xs font-mono text-neutral-400 uppercase tracking-widest mb-3 font-semibold">
                 HIGH-RESOLUTION NEURAL ARCHITECTURE BLUEPRINT
               </div>
 
-              <div className="rounded-2xl overflow-hidden border border-[#163832]">
+              <div className="rounded-2xl overflow-hidden border border-white/10">
                 <img 
                   src="/architecture-diagram.jpg" 
                   alt="Clockin AI Closed-Loop SLM Architecture"
@@ -642,9 +644,9 @@ export default function ProcessWorkflow() {
                 />
               </div>
 
-              <div className="pt-4 flex flex-wrap items-center justify-between text-xs font-mono text-[#888888] gap-2">
+              <div className="pt-4 flex flex-wrap items-center justify-between text-xs font-mono text-neutral-400 gap-2">
                 <div>AGENTIC &bull; AUTONOMOUS &bull; SELF-REINFORCING</div>
-                <div className="text-[#2DD4BF] font-bold">CLOCKIN.AI // SYSTEM ARCHITECTURE 2026</div>
+                <div className="text-white font-bold">CLOCKIN.AI // SYSTEM ARCHITECTURE 2026</div>
               </div>
             </motion.div>
           </motion.div>

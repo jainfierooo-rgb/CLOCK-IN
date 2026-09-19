@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en" className={jakarta.variable}>
       <body className="antialiased bg-white text-[#0A0A0A]">
         {children}
-        <FloatingWhatsApp phoneNumber="919876543210" />
+        <FloatingWhatsApp phoneNumber="918848563824" />
       </body>
     </html>
   );

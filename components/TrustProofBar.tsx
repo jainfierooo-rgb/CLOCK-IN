@@ -4,36 +4,36 @@ import { motion } from 'framer-motion';
 
 const metrics = [
   {
-    value: '101×',
-    unit: 'VALUATION YIELD',
-    label: 'Enterprise Value Compounding',
-    desc: 'Autonomous margin expansion from bottom to top.',
+    value: '24/7',
+    unit: 'AVAILABILITY',
+    label: 'Automated Operations',
+    desc: 'Zero wait times on customer calls, WhatsApp, and bookings.',
   },
   {
     value: '14–21',
-    unit: 'DAYS TO GO-LIVE',
-    label: 'Turnkey Launch Cycle',
-    desc: 'From initial data audit to production execution.',
+    unit: 'DAYS TO LAUNCH',
+    label: 'Turnkey Go-Live',
+    desc: 'From discovery to live deployment with your existing tools.',
   },
   {
-    value: '22ms',
-    unit: 'GLOBAL EDGE',
-    label: 'Deterministic Latency',
-    desc: 'Instant booking, triage, and bi-directional ERP sync.',
+    value: '6+',
+    unit: 'KEY INDUSTRIES',
+    label: 'Industry Support',
+    desc: 'Hospitality, Healthcare, Manufacturing, Retail, and more.',
   },
   {
-    value: '0.00%',
-    unit: 'HALLUCINATION',
-    label: 'Mathematical Safety',
-    desc: 'Hard deterministic boundaries and zero PHI leakage.',
+    value: '0',
+    unit: 'EXTRA HARDWARE',
+    label: 'Cloud-Native Setup',
+    desc: 'Runs seamlessly in the cloud with zero on-site maintenance.',
   },
 ];
 
 export default function TrustProofBar() {
   return (
-    <section className="bg-[#FAF8F5] border-b border-[#E5E0D8] py-16 sm:py-20 overflow-hidden">
+    <section className="bg-[#FAF8F5] border-y border-[#EAE6DF] py-16 sm:py-20 overflow-hidden text-[#0A0A0A]">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 divide-y lg:divide-y-0 lg:divide-x divide-[#E5E0D8]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 divide-y lg:divide-y-0 lg:divide-x divide-[#EAE6DF]">
           {metrics.map((item, idx) => (
             <motion.div 
               key={idx} 
@@ -44,7 +44,7 @@ export default function TrustProofBar() {
               className={`flex flex-col justify-between space-y-3 ${idx > 0 ? 'pt-8 lg:pt-0 lg:pl-8' : ''}`}
             >
               <div className="space-y-1">
-                <div className="text-[10px] font-mono tracking-widest uppercase text-[#0D9488] font-bold">
+                <div className="text-[10px] font-mono tracking-widest uppercase text-[#737068] font-bold">
                   {item.unit}
                 </div>
                 <div className="text-4xl sm:text-5xl font-extrabold text-[#0A0A0A] tracking-tight">
@@ -53,10 +53,10 @@ export default function TrustProofBar() {
               </div>
 
               <div>
-                <div className="text-xs font-bold uppercase tracking-wider text-[#262626] mb-1">
+                <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#1A1A1A] mb-1">
                   {item.label}
                 </div>
-                <p className="text-xs text-[#666666] leading-relaxed max-w-xs">
+                <p className="text-xs text-[#5A5852] leading-relaxed max-w-xs font-normal">
                   {item.desc}
                 </p>
               </div>

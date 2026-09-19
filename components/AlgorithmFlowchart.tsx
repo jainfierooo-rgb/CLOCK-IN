@@ -59,7 +59,7 @@ const pipelineStages = [
     step: 'STAGE 04',
     title: '101× Margin Yield',
     icon: TrendingUp,
-    badge: 'Sub-25ms Latency',
+    badge: 'Real-Time Latency',
     summary: 'Instant resolution delivered back to guests, patients, and plant supervisors.',
     bullets: [
       '0-second front-desk wait time at resorts',

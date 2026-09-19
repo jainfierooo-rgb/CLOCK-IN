@@ -74,7 +74,7 @@ export default function IndustriesSection() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-4xl mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5] border border-[#E5E0D8] text-[10px] font-mono tracking-widest uppercase text-[#0D9488] font-bold mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5] border border-[#EAE6DF] text-[10px] font-mono tracking-widest uppercase text-[#63615A] font-bold mb-4">
             <span>UNIVERSAL DOMAIN TAKEOVER // ALL ENTERPRISE SECTORS</span>
           </div>
 
@@ -82,7 +82,7 @@ export default function IndustriesSection() {
             We take over complex operations across any industry.
           </h2>
 
-          <p className="text-sm sm:text-base lg:text-lg text-[#555555] leading-relaxed font-normal max-w-3xl">
+          <p className="text-sm sm:text-base lg:text-lg text-[#5A5852] leading-relaxed font-normal max-w-3xl">
             Whether in luxury hospitality, clinical hospital networks, precision manufacturing foundries, or custom multi-tier enterprise domains. Clockin AI ingests your messy physical operational reality, eliminates human bottlenecks, and compounds your business valuation by 101×.
           </p>
         </motion.div>
@@ -97,22 +97,22 @@ export default function IndustriesSection() {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.6, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="bg-[#FAF8F5] hover:bg-white rounded-3xl p-8 border border-[#E5E0D8] hover:border-[#0D9488] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+              className="bg-[#FAF8F5] hover:bg-white rounded-3xl p-8 border border-[#EAE6DF] hover:border-[#0A0A0A] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
             >
               <div>
                 {/* Top Sector Badge & Impact Pill */}
-                <div className="flex items-center justify-between pb-5 border-b border-[#E7E2D8] mb-6">
-                  <span className="text-[11px] font-mono font-extrabold text-[#0A0A0A] tracking-wider">
+                <div className="flex items-center justify-between pb-5 border-b border-[#EAE6DF] mb-6">
+                  <span className="text-[11px] font-mono font-bold text-[#7A7770] tracking-wider">
                     {item.num}
                   </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#E5E0D8] text-[10px] font-mono font-bold text-[#0D9488] shadow-2xs">
-                    <TrendingUp className="w-3 h-3 text-[#0D9488]" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#E2DDD5] text-[10px] font-mono font-bold text-[#0A0A0A] shadow-2xs">
+                    <TrendingUp className="w-3 h-3 text-[#0A0A0A]" />
                     <span>{item.impact}</span>
                   </span>
                 </div>
 
                 {/* Industry Headline */}
-                <h3 className="font-extrabold text-xl sm:text-2xl text-[#0A0A0A] tracking-tight mb-3 group-hover:text-[#0D9488] transition-colors">
+                <h3 className="font-extrabold text-xl sm:text-2xl text-[#0A0A0A] tracking-tight mb-3 group-hover:text-[#262626] transition-colors">
                   {item.name}
                 </h3>
 
@@ -121,7 +121,7 @@ export default function IndustriesSection() {
                   {item.systems.map((sys, i) => (
                     <span 
                       key={i}
-                      className="px-2 py-0.5 rounded-md bg-white border border-[#E5E0D8] text-[10px] font-mono text-[#666666] font-medium"
+                      className="px-2.5 py-1 rounded-md bg-white border border-[#E5E0D8] text-[10px] font-mono text-[#4A4843] font-medium"
                     >
                       {sys}
                     </span>
@@ -129,20 +129,20 @@ export default function IndustriesSection() {
                 </div>
 
                 {/* Authoritative Takeover Description */}
-                <p className="text-xs sm:text-sm text-[#555555] leading-relaxed mb-6 font-normal">
+                <p className="text-xs sm:text-sm text-[#5A5852] leading-relaxed mb-6 font-normal">
                   {item.summary}
                 </p>
               </div>
 
               {/* Bottom Action Strip */}
-              <div className="pt-6 border-t border-[#E7E2D8] flex items-center justify-between">
-                <span className="text-[11px] font-mono text-[#888888]">
+              <div className="pt-6 border-t border-[#EAE6DF] flex items-center justify-between">
+                <span className="text-[11px] font-mono text-[#7A7770]">
                   {item.turnaround}
                 </span>
 
                 <Link
                   href={`/industries/${item.slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0A0A0A] group-hover:text-[#0D9488] transition-colors font-mono"
+                  className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold uppercase tracking-wider text-[#0A0A0A] group-hover:text-[#5A5852] transition-colors"
                 >
                   <span>Inspect Architecture</span>
                   <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -158,26 +158,26 @@ export default function IndustriesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-[#FAF8F5] rounded-3xl p-8 sm:p-12 border border-[#E5E0D8] relative overflow-hidden shadow-sm"
+          className="bg-[#FAF8F5] rounded-3xl p-8 sm:p-12 border border-[#EAE6DF] relative overflow-hidden shadow-lg text-[#0A0A0A]"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-8 space-y-3">
-              <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[#0D9488] font-bold">
-                <Cpu className="w-3.5 h-3.5 text-[#0D9488]" />
+              <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[#6A6862] font-bold">
+                <Cpu className="w-3.5 h-3.5 text-[#0A0A0A]" />
                 <span>UNIVERSAL ADAPTIVE ENGINE // 100% SECTOR AGNOSTIC</span>
               </div>
               <h3 className="font-extrabold text-2xl sm:text-3xl text-[#0A0A0A] tracking-tight">
                 Your Industry Isn&apos;t Listed? We Take Over Any Custom Enterprise Category.
               </h3>
-              <p className="text-xs sm:text-sm text-[#555555] leading-relaxed max-w-2xl font-normal">
+              <p className="text-xs sm:text-sm text-[#5A5852] leading-relaxed max-w-2xl font-normal">
                 If your business has operational workflows, human communication friction, and database ledgers, Clockin AI can take it over. Our applied engineering team audits your proprietary schemas, constructs deterministic guardrails, and executes production deployment in 14 to 21 days.
               </p>
             </div>
 
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
               <a
-                href="https://wa.me/919876543210?text=Inquiry%20regarding%20custom%20industry%20takeover%20with%20Clockin%20AI."
+                href="https://wa.me/918848563824?text=Inquiry%20regarding%20custom%20industry%20takeover%20with%20Clockin%20AI."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-teal-primary px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-sm active:scale-95 transition-all"

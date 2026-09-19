@@ -38,15 +38,15 @@ export default function FinalCta() {
         className="max-w-[1200px] mx-auto px-6 sm:px-12 text-center"
       >
         
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5] border border-[#E5E0D8] text-[10px] font-mono tracking-widest uppercase text-[#0D9488] font-bold mb-6">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5] border border-[#EAE6DF] text-[10px] font-mono tracking-widest uppercase text-[#63615A] font-bold mb-6">
           <span>GET STARTED // DIRECT DISPATCH</span>
         </div>
 
         <h2 className="font-extrabold text-3xl sm:text-5xl lg:text-6xl text-[#0A0A0A] tracking-tight leading-[1.1] max-w-4xl mx-auto mb-6">
-          Make your business <span className="text-[#0D9488]">101 times</span> more worthy.
+          Make your business <span className="text-[#0A0A0A] underline decoration-[#0A0A0A]/25 underline-offset-8">101 times</span> more worthy.
         </h2>
 
-        <p className="text-sm sm:text-base lg:text-lg text-[#666666] max-w-2xl mx-auto leading-relaxed font-normal mb-12">
+        <p className="text-sm sm:text-base lg:text-lg text-[#5A5852] max-w-2xl mx-auto leading-relaxed font-normal mb-12">
           From workflow audit to production deployment in 21 days. Deploy custom autonomous concierges, predictive yields, and deep ERP automation across your enterprise terrain.
         </p>
 
@@ -55,12 +55,12 @@ export default function FinalCta() {
           <motion.a
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            href="https://wa.me/919876543210?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20services."
+            href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20services."
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-teal-primary w-full sm:w-auto px-8 py-4 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm"
+            className="btn-teal-primary w-full sm:w-auto px-8 py-4 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg"
           >
-            <MessageSquare className="w-4 h-4" />
+            <MessageSquare className="w-4 h-4 text-white" />
             <span>Chat on WhatsApp</span>
           </motion.a>
 
@@ -72,20 +72,20 @@ export default function FinalCta() {
             rel="noreferrer"
             className="btn-dark-primary w-full sm:w-auto px-8 py-4 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2"
           >
-            <Calendar className="w-4 h-4" />
+            <Calendar className="w-4 h-4 text-[#0A0A0A]" />
             <span>Book 10-Min Briefing</span>
           </motion.a>
         </div>
 
         {/* Minimal Single-Line Fast Callback */}
-        <div className="max-w-md mx-auto pt-10 border-t border-[#E5E0D8]">
-          <p className="text-[11px] font-mono text-[#888888] uppercase tracking-wider font-semibold mb-3">
+        <div className="max-w-md mx-auto pt-10 border-t border-[#EAE6DF]">
+          <p className="text-[11px] font-mono text-[#7A7770] uppercase tracking-wider font-semibold mb-3">
             Or request an engineering callback:
           </p>
 
           {submitted ? (
-            <div className="flex items-center justify-center gap-2 text-xs font-mono text-[#0D9488] bg-[#FAF8F5] py-3 px-4 rounded-xl border border-[#99F6E4]">
-              <CheckCircle2 className="w-4 h-4" />
+            <div className="flex items-center justify-center gap-2 text-xs font-mono text-[#0A0A0A] bg-[#FAF8F5] py-3 px-4 rounded-xl border border-[#EAE6DF]">
+              <CheckCircle2 className="w-4 h-4 text-[#0A0A0A]" />
               <span>Inquiry registered. An enterprise architect will respond within 2 hours.</span>
             </div>
           ) : (
@@ -96,7 +96,7 @@ export default function FinalCta() {
                 value={contact}
                 onChange={(e) => setContact(e.target.value)}
                 placeholder="Work email or WhatsApp number"
-                className="flex-1 px-4 py-3 bg-[#FAF8F5] border border-[#E5E0D8] rounded-xl text-xs text-[#0A0A0A] placeholder-[#888888] focus:outline-none focus:border-[#0D9488] font-sans"
+                className="flex-1 px-4 py-3 bg-[#FAF8F5] border border-[#DED8CE] rounded-xl text-xs text-[#0A0A0A] placeholder-[#8A8780] focus:outline-none focus:border-[#0A0A0A] font-sans"
               />
               <button
                 type="submit"
