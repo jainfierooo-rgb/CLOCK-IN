@@ -30,7 +30,7 @@ export default function PrivacyPage() {
           </h1>
 
           <p className="text-sm font-mono text-[#7A7770]">
-            Effective Date: January 1, 2026 // Indian Jurisdiction (Kerala Operations Hub)
+            Effective Date: January 1, 2026 // Worldwide Operations &amp; Data Governance
           </p>
         </div>
 
@@ -67,9 +67,9 @@ export default function PrivacyPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="p-5 rounded-xl border border-[#EAE6DF] bg-white space-y-2">
-              <div className="font-mono text-xs font-bold text-[#0A0A0A]">DPDP Act 2023 (India)</div>
+              <div className="font-mono text-xs font-bold text-[#0A0A0A]">GDPR &amp; DPDP Global Standards</div>
               <p className="text-xs text-[#5A5852] leading-relaxed">
-                Full compliance with India&apos;s Digital Personal Data Protection Act. All cloud workloads are restricted to domestic Indian data regions.
+                Full compliance with international data privacy mandates including GDPR and the DPDP Act. Workloads are deployed in client-designated sovereign data regions worldwide.
               </p>
             </div>
             <div className="p-5 rounded-xl border border-[#EAE6DF] bg-white space-y-2">
@@ -101,10 +101,10 @@ export default function PrivacyPage() {
           </p>
           <div className="text-xs font-mono text-[#0A0A0A] space-y-1">
             <div>Office of Data Governance // Clockin AI</div>
-            <div>Kerala Tech &amp; Operations Hub, India</div>
+            <div>Worldwide Tech &amp; Operations Hub</div>
             <div>Direct Telephone: <a href="tel:+918848563824" className="font-bold underline">+91 88485 63824</a></div>
             <div>Direct WhatsApp: <a href="https://wa.me/918848563824" className="font-bold underline">+91 88485 63824</a></div>
-            <div>Email: <span className="font-bold">partners@clockin.ai</span></div>
+            <div>Email: <a href="mailto:partners@clockin.ai?subject=Privacy%20Inquiry%20-%20Clockin%20AI" className="font-bold underline hover:text-[#5A5852]">partners@clockin.ai</a></div>
           </div>
         </section>
 

@@ -372,7 +372,7 @@ export default function LiveConciergeDemo() {
             </div>
 
             {/* Main Chat Conversation Viewport */}
-            <div className="p-6 sm:p-8 space-y-6 min-h-[460px] flex flex-col justify-between">
+            <div className="p-4 sm:p-8 space-y-6 min-h-[460px] flex flex-col justify-between">
               
               <div className="space-y-6">
                 
@@ -448,7 +448,7 @@ export default function LiveConciergeDemo() {
                       initial={{ opacity: 0, scale: 0.96, y: 15 }}
                       animate={{ opacity: 1, scale: 1, y: 0 }}
                       transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                      className="p-5 sm:p-6 rounded-2xl bg-white border border-[#EAE6DF] shadow-md space-y-5"
+                      className="p-4 sm:p-6 rounded-2xl bg-white border border-[#EAE6DF] shadow-md space-y-4 sm:space-y-5"
                     >
                       {/* Insight Card Header */}
                       <div className="flex flex-wrap items-center justify-between pb-4 border-b border-[#EAE6DF] gap-2">
@@ -501,7 +501,7 @@ export default function LiveConciergeDemo() {
                       </div>
 
                       {/* Verified Atomic System Write Badge */}
-                      <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+                      <div className="p-3 rounded-xl bg-[#FAF8F5] border border-[#EAE6DF] flex flex-wrap items-center justify-between gap-2 text-[11px] sm:text-xs font-mono">
                         <div className="flex items-center gap-2">
                           <ShieldCheck className="w-4 h-4 text-[#0A0A0A]" />
                           <span className="font-bold text-[#0A0A0A]">

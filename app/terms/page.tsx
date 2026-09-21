@@ -30,7 +30,7 @@ export default function TermsPage() {
           </h1>
 
           <p className="text-sm font-mono text-[#7A7770]">
-            Governed under Indian Contract Act, 1872 // Kerala Jurisdiction
+            Governed under International Enterprise Commercial Standards // Worldwide Operations
           </p>
         </div>
 
@@ -91,8 +91,12 @@ export default function TermsPage() {
           <p className="text-[#5A5852] leading-relaxed">
             Custom enterprise MSAs, on-premises air-gap hardware purchase orders, and bespoke SOC 2 audit packages can be requested via our enterprise engineering desk:
           </p>
-          <div className="pt-2 text-[#0A0A0A]">
-            Direct Telephone: <a href="tel:+918848563824" className="font-bold underline">+91 88485 63824</a> | WhatsApp: <a href="https://wa.me/918848563824" className="font-bold underline">+91 88485 63824</a>
+          <div className="pt-2 text-[#0A0A0A] flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span>Direct Telephone: <a href="tel:+918848563824" className="font-bold underline">+91 88485 63824</a></span>
+            <span className="hidden sm:inline text-neutral-300">|</span>
+            <span>WhatsApp: <a href="https://wa.me/918848563824" className="font-bold underline">+91 88485 63824</a></span>
+            <span className="hidden sm:inline text-neutral-300">|</span>
+            <span>Email: <a href="mailto:partners@clockin.ai?subject=Terms%20and%20SLA%20Inquiry%20-%20Clockin%20AI" className="font-bold underline">partners@clockin.ai</a></span>
           </div>
         </section>
 

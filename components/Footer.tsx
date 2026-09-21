@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowUpRight, ShieldCheck, CheckCircle2, PhoneCall, MessageSquare } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, CheckCircle2, PhoneCall, MessageSquare, Mail } from 'lucide-react';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -36,7 +36,7 @@ export default function Footer() {
               Autonomous neural infrastructure for modern enterprise. Operating with real-time deterministic reliability to make legacy operations 101× more worthy.
             </p>
             <div className="text-[11px] font-mono text-neutral-300 uppercase tracking-widest pt-1 font-bold">
-              KERALA, INDIA // TECH &amp; OPERATIONS HUB
+              WORLDWIDE // GLOBAL TECH &amp; OPERATIONS HUB
             </div>
           </div>
 
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
 
         {/* 5-Column Enterprise Directory with 100% Real Navigable Links */}
-        <div className="py-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-10 border-b border-white/10">
+        <div className="py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-10 border-b border-white/10">
           
           {/* Column 1: Sector Takeovers */}
           <div className="space-y-4">
@@ -221,7 +221,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/architecture#hardware" className="hover:text-white transition-colors block">
-                  Sovereign Indian Cloud VPC
+                  Sovereign Global Cloud VPC
                 </Link>
               </li>
               <li>
@@ -247,16 +247,40 @@ export default function Footer() {
             <div className="text-xs font-mono font-extrabold tracking-wider uppercase text-white">
               Direct Inquiries
             </div>
-            <div className="text-xs text-neutral-400 space-y-2.5 leading-relaxed font-mono">
-              <p className="text-white font-semibold">
-                partners@clockin.ai<br />
-                support@clockin.ai
-              </p>
-              <p className="text-neutral-300">
-                Kerala Hub: <a href="tel:+918848563824" className="hover:text-white underline">+91 88485 63824</a><br />
+            <div className="text-xs text-neutral-400 space-y-3 leading-relaxed font-mono">
+              <div className="space-y-2">
+                <a
+                  href="mailto:partners@clockin.ai?subject=Inquiry%20regarding%20Clockin%20AI%20Services&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20are%20interested%20in%20exploring%20custom%20AI%20services%20for%20our%20operations.%0A%0ACompany%3A%0APhone%3A%0ABrief%20Requirement%3A"
+                  className="flex items-center gap-2 text-white font-semibold hover:text-neutral-300 transition-colors group cursor-pointer"
+                  title="Send email to partners@clockin.ai"
+                >
+                  <Mail className="w-3.5 h-3.5 text-neutral-300 group-hover:text-white shrink-0" />
+                  <span className="underline decoration-white/30 underline-offset-4 group-hover:decoration-white">partners@clockin.ai</span>
+                </a>
+                <a
+                  href="mailto:support@clockin.ai?subject=Support%20Request%20-%20Clockin%20AI"
+                  className="flex items-center gap-2 text-neutral-300 hover:text-white transition-colors group cursor-pointer"
+                  title="Send email to support@clockin.ai"
+                >
+                  <Mail className="w-3.5 h-3.5 text-neutral-400 group-hover:text-white shrink-0" />
+                  <span className="underline decoration-white/20 underline-offset-4 group-hover:decoration-white">support@clockin.ai</span>
+                </a>
+              </div>
+
+              <p className="text-neutral-300 pt-1">
+                Global Hotline: <a href="tel:+918848563824" className="hover:text-white underline">+91 88485 63824</a><br />
                 WhatsApp Direct: <a href="https://wa.me/918848563824" className="hover:text-white underline">+91 88485 63824</a>
               </p>
-              <div className="pt-2">
+
+              <div className="pt-2 flex flex-col gap-2">
+                <a
+                  href="mailto:partners@clockin.ai?subject=Direct%20Inquiry%20-%20Clockin%20AI"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-white hover:text-neutral-300 transition-colors"
+                >
+                  <Mail className="w-3.5 h-3.5 text-white" />
+                  <span>Send Direct Email</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
                 <a
                   href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20partnership."
                   target="_blank"
@@ -286,7 +310,7 @@ export default function Footer() {
             </Link>
             <Link href="/architecture#hardware" className="flex items-center gap-1.5 hover:text-white transition-colors">
               <ShieldCheck className="w-4 h-4 text-white" />
-              <span>SOVEREIGN INDIAN VPC DEPLOYMENT</span>
+              <span>GLOBAL SOVEREIGN VPC DEPLOYMENT</span>
             </Link>
             <Link href="/architecture#latency" className="flex items-center gap-1.5 hover:text-white transition-colors">
               <ShieldCheck className="w-4 h-4 text-white" />
@@ -295,7 +319,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-2 text-white">
             <span className="w-2 h-2 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)] animate-pulse"></span>
-            <span className="text-white font-bold">INDIA PRIMARY CLUSTER OPERATIONAL</span>
+            <span className="text-white font-bold">WORLDWIDE CLUSTERS OPERATIONAL</span>
           </div>
         </div>
 

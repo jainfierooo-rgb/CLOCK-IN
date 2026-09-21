@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, TrendingUp, ArrowRight, Cpu } from 'lucide-react';
+import { ArrowUpRight, TrendingUp, ArrowRight, Cpu, Mail } from 'lucide-react';
 
 const industriesList = [
   {
@@ -97,7 +97,7 @@ export default function IndustriesSection() {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.6, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="bg-[#FAF8F5] hover:bg-white rounded-3xl p-8 border border-[#EAE6DF] hover:border-[#0A0A0A] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+              className="bg-[#FAF8F5] hover:bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[#EAE6DF] hover:border-[#0A0A0A] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
             >
               <div>
                 {/* Top Sector Badge & Impact Pill */}
@@ -158,7 +158,7 @@ export default function IndustriesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-[#FAF8F5] rounded-3xl p-8 sm:p-12 border border-[#EAE6DF] relative overflow-hidden shadow-lg text-[#0A0A0A]"
+          className="bg-[#FAF8F5] rounded-2xl sm:rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#EAE6DF] relative overflow-hidden shadow-lg text-[#0A0A0A]"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
@@ -187,12 +187,11 @@ export default function IndustriesSection() {
               </a>
 
               <a
-                href="https://cal.com"
-                target="_blank"
-                rel="noreferrer"
-                className="btn-dark-primary px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-center flex items-center justify-center gap-2"
+                href="mailto:partners@clockin.ai?subject=Inquiry%20regarding%20Custom%20Industry%20Takeover%20-%20Clockin%20AI&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20discuss%20custom%20AI%20services%20for%20our%20enterprise.%0A%0ACompany%20Name%3A%0AIndustry%2FSector%3A%0APrimary%20Operational%20Bottleneck%3A"
+                className="btn-dark-primary px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-center flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span>Schedule 10-Min Architecture Briefing</span>
+                <Mail className="w-4 h-4 text-[#0A0A0A]" />
+                <span>Email Our Team (partners@clockin.ai)</span>
               </a>
             </div>
 

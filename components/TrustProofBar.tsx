@@ -33,7 +33,7 @@ export default function TrustProofBar() {
   return (
     <section className="bg-[#FAF8F5] border-y border-[#EAE6DF] py-16 sm:py-20 overflow-hidden text-[#0A0A0A]">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 divide-y lg:divide-y-0 lg:divide-x divide-[#EAE6DF]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {metrics.map((item, idx) => (
             <motion.div 
               key={idx} 
@@ -41,7 +41,7 @@ export default function TrustProofBar() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.6, delay: idx * 0.12, ease: [0.16, 1, 0.3, 1] }}
-              className={`flex flex-col justify-between space-y-3 ${idx > 0 ? 'pt-8 lg:pt-0 lg:pl-8' : ''}`}
+              className="flex flex-col justify-between space-y-3 p-6 sm:p-0 rounded-2xl bg-white sm:bg-transparent border border-[#EAE6DF] sm:border-0 lg:border-r lg:last:border-r-0 lg:pr-8"
             >
               <div className="space-y-1">
                 <div className="text-[10px] font-mono tracking-widest uppercase text-[#737068] font-bold">

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, MessageSquare, Calendar, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, MessageSquare, Calendar, CheckCircle2, Mail } from 'lucide-react';
 
 export default function FinalCta() {
   const [contact, setContact] = useState('');
@@ -67,13 +67,11 @@ export default function FinalCta() {
           <motion.a
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            href="https://cal.com"
-            target="_blank"
-            rel="noreferrer"
-            className="btn-dark-primary w-full sm:w-auto px-8 py-4 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2"
+            href="mailto:partners@clockin.ai?subject=Inquiry%20regarding%20Clockin%20AI%20Services&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20inquire%20about%20custom%20AI%20services.%0A%0ACompany%20Name%3A%0AContact%20Phone%3A%0ABusiness%20Need%3A"
+            className="btn-dark-primary w-full sm:w-auto px-8 py-4 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer"
           >
-            <Calendar className="w-4 h-4 text-[#0A0A0A]" />
-            <span>Book 10-Min Briefing</span>
+            <Mail className="w-4 h-4 text-[#0A0A0A]" />
+            <span>Email partners@clockin.ai</span>
           </motion.a>
         </div>
 

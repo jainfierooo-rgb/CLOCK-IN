@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 const slides = [
@@ -80,7 +80,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#E2DDD5] text-[11px] font-mono tracking-widest text-[#5A5852] uppercase font-bold shadow-xs"
           >
             <span className="w-2 h-2 rounded-full bg-[#0A0A0A] animate-pulse"></span>
-            <span>CUSTOM AI SERVICES // KERALA, INDIA</span>
+            <span>CUSTOM AI SERVICES // WORLDWIDE</span>
           </motion.div>
 
           {/* Master Bold Headlines */}
@@ -108,39 +108,48 @@ export default function Hero() {
             Our team builds and manages custom AI systems for businesses across luxury hospitality, clinical networks, manufacturing, and retail—turning manual bottlenecks into seamless automation.
           </motion.p>
 
-          {/* Dual Action Buttons */}
+          {/* Action Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2 w-full max-w-md sm:max-w-none mx-auto"
           >
             <a
               href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-teal-primary w-full sm:w-auto px-9 py-4 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all cursor-pointer"
+              className="btn-teal-primary w-full sm:w-auto px-8 py-3.5 sm:py-4 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all cursor-pointer"
             >
               <span>Contact Our Team</span>
               <ArrowRight className="w-4 h-4" />
             </a>
 
+            <a
+              href="mailto:partners@clockin.ai?subject=Inquiry%20regarding%20Clockin%20AI%20Services&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20learn%20more%20about%20your%20custom%20AI%20engineering%20services.%0A%0ACompany%3A%0APhone%3A%0ARequirement%3A"
+              className="btn-dark-primary w-full sm:w-auto px-7 py-3.5 sm:py-4 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 shadow-xs cursor-pointer"
+            >
+              <Mail className="w-4 h-4" />
+              <span>Email partners@clockin.ai</span>
+            </a>
+
             <Link
               href="/architecture"
-              className="btn-dark-primary w-full sm:w-auto px-8 py-4 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 shadow-xs cursor-pointer"
+              className="w-full sm:w-auto px-6 py-3.5 sm:py-4 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1 text-[#5A5852] hover:text-[#0A0A0A] transition-colors cursor-pointer"
             >
               <span>How It Works</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </motion.div>
 
         </div>
 
-        {/* Cinematic Framed Architectural Showcase Viewport */}
+        {/* Cinematic Framed Showcase Viewport with Responsive Scaling */}
         <motion.div 
           initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-12 sm:mt-16 rounded-3xl overflow-hidden border border-[#EAE6DF] shadow-2xl relative aspect-[16/9] sm:aspect-[21/9] max-w-[1360px] mx-auto bg-[#0A0A0A]"
+          className="mt-10 sm:mt-16 rounded-2xl sm:rounded-3xl overflow-hidden border border-[#EAE6DF] shadow-2xl relative min-h-[440px] sm:min-h-[480px] lg:min-h-[520px] max-w-[1360px] mx-auto bg-[#0A0A0A] flex flex-col justify-end"
         >
           {/* Background Crossfading Images with Ken Burns Drift */}
           <AnimatePresence initial={false} mode="wait">
@@ -161,49 +170,50 @@ export default function Hero() {
                 transition={{ duration: 8.5, ease: 'easeOut' }}
                 className="w-full h-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/30" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/20" />
             </motion.div>
           </AnimatePresence>
 
           {/* In-Frame Context Overlay */}
-          <div className="absolute bottom-6 sm:bottom-10 left-6 sm:left-12 z-10 max-w-xl text-white space-y-2">
-            <span className="text-[10px] font-mono tracking-widest text-[#DED8CE] uppercase font-bold bg-black/50 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 inline-block">
+          <div className="relative z-10 p-6 sm:p-10 lg:p-12 max-w-2xl text-white space-y-2.5">
+            <span className="text-[10px] font-mono tracking-widest text-[#DED8CE] uppercase font-bold bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 inline-block shadow-sm">
               {activeSlide.tag}
             </span>
-            <h3 className="font-extrabold text-xl sm:text-3xl text-white tracking-tight leading-snug">
-              {activeSlide.titleLine1} {activeSlide.titleLine2}
+            <h3 className="font-extrabold text-xl sm:text-2xl lg:text-3xl text-white tracking-tight leading-snug drop-shadow-md">
+              {activeSlide.titleLine1} <br className="hidden sm:inline" />
+              <span className="text-neutral-200">{activeSlide.titleLine2}</span>
             </h3>
-            <p className="text-xs sm:text-sm text-neutral-300 line-clamp-2 max-w-lg hidden sm:block">
+            <p className="text-xs sm:text-sm text-neutral-300 line-clamp-2 max-w-xl">
               {activeSlide.desc}
             </p>
           </div>
 
-          {/* In-Frame Desktop Chevrons (Hidden on mobile) */}
+          {/* In-Frame Chevrons (Touch-friendly on all screen sizes) */}
           <button
             onClick={prevSlide}
             aria-label="Previous slide"
-            className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-black/80 backdrop-blur-md border border-white/20 items-center justify-center text-white transition-all hover:scale-105 cursor-pointer"
+            className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/50 hover:bg-black/85 backdrop-blur-md border border-white/20 flex items-center justify-center text-white transition-all hover:scale-105 cursor-pointer shadow-lg active:scale-95"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           <button
             onClick={nextSlide}
             aria-label="Next slide"
-            className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/40 hover:bg-black/80 backdrop-blur-md border border-white/20 items-center justify-center text-white transition-all hover:scale-105 cursor-pointer"
+            className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/50 hover:bg-black/85 backdrop-blur-md border border-white/20 flex items-center justify-center text-white transition-all hover:scale-105 cursor-pointer shadow-lg active:scale-95"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           {/* Sector Switcher Indicator Strip */}
-          <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 flex items-center gap-1.5 bg-black/50 backdrop-blur-md p-1.5 rounded-full border border-white/20">
+          <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 flex items-center gap-1 sm:gap-1.5 bg-black/60 backdrop-blur-md p-1 sm:p-1.5 rounded-full border border-white/20">
             {slides.map((s, idx) => (
               <button
                 key={s.id}
                 onClick={() => setCurrent(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
-                className={`px-3 py-1 rounded-full text-[10px] font-mono font-bold transition-all duration-300 cursor-pointer ${
+                className={`px-2.5 sm:px-3 py-1 rounded-full text-[10px] font-mono font-bold transition-all duration-300 cursor-pointer ${
                   current === idx
                     ? 'bg-white text-black shadow-xs'
                     : 'text-neutral-300 hover:text-white'

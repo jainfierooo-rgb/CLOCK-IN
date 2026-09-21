@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Layers, Search, ArrowRight, ArrowUpRight } from 'lucide-react';
+import { Menu, X, Layers, Search, ArrowRight, ArrowUpRight, Mail } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +11,9 @@ export default function Navbar() {
   return (
     <>
       {/* Top Notification Banner in Warm Modern Style */}
-      <div className="bg-[#FAF8F5] border-b border-[#EAE6DF] text-[#5A5852] text-[11px] sm:text-xs py-2 px-4 text-center font-mono tracking-wide flex items-center justify-center gap-2">
-        <span className="truncate max-w-[280px] sm:max-w-none">
-          Custom AI Engineering &bull; Serving Businesses Across All Key Industries
+      <div className="bg-[#FAF8F5] border-b border-[#EAE6DF] text-[#5A5852] text-[11px] sm:text-xs py-2 px-3 sm:px-4 text-center font-mono tracking-wide flex items-center justify-center gap-2">
+        <span className="truncate max-w-[210px] sm:max-w-none">
+          Custom AI Engineering &bull; Serving Key Industries
         </span>
         <Link href="/architecture" className="text-[#0A0A0A] font-bold underline inline-flex items-center gap-1 hover:opacity-80 shrink-0">
           <span>How It Works</span>
@@ -167,8 +167,16 @@ export default function Navbar() {
                   <span>Dispatch on WhatsApp (+91 88485 63824)</span>
                 </a>
 
+                <a
+                  href="mailto:partners@clockin.ai?subject=Inquiry%20regarding%20Clockin%20AI%20Services&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20inquire%20about%20custom%20AI%20services.%0A%0ACompany%3A%0APhone%3A%0ARequirement%3A"
+                  className="w-full text-center py-3 btn-dark-primary text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 shadow-xs"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>Email partners@clockin.ai</span>
+                </a>
+
                 <div className="text-center text-[10px] font-mono text-[#7A7770] pt-1 uppercase">
-                  KERALA, INDIA // 24/7 OPERATIONS DESK
+                  WORLDWIDE // 24/7 OPERATIONS DESK
                 </div>
               </div>
             </motion.div>

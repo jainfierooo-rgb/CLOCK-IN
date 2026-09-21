@@ -20,7 +20,8 @@ import {
   FileText, 
   Server, 
   MessageSquare, 
-  Calendar 
+  Calendar,
+  Mail 
 } from 'lucide-react';
 
 interface SectorDetail {
@@ -520,23 +521,31 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
               Speak directly with an AI systems architect specializing in {sector.name.toLowerCase()} infrastructure. We deliver an operational boundary audit in 48 hours.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <a
                 href={`https://wa.me/918848563824?text=Direct%20inquiry%20regarding%20Clockin%20AI%20architecture%20for%20${encodeURIComponent(sector.name)}.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-teal-primary w-full sm:w-auto px-8 py-3.5 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg"
+                className="btn-teal-primary w-full sm:w-auto px-7 py-3.5 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg"
               >
                 <MessageSquare className="w-4 h-4 text-white" />
-                <span>Chat with Sector Lead on WhatsApp</span>
+                <span>Chat on WhatsApp</span>
+              </a>
+
+              <a
+                href={`mailto:partners@clockin.ai?subject=Inquiry%20regarding%20Clockin%20AI%20for%20${encodeURIComponent(sector.name)}&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20inquire%20about%20your%20AI%20solutions%20for%20${encodeURIComponent(sector.name)}.%0A%0ACompany%3A%0APhone%3A%0ARequirement%3A`}
+                className="btn-dark-primary w-full sm:w-auto px-7 py-3.5 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Mail className="w-4 h-4 text-[#0A0A0A]" />
+                <span>Email Sector Team</span>
               </a>
 
               <Link
                 href="/#industries"
-                className="btn-dark-primary w-full sm:w-auto px-8 py-3.5 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-6 py-3.5 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-1 border border-[#EAE6DF] rounded-xl text-[#0A0A0A] hover:bg-white transition-colors"
               >
                 <ArrowLeft className="w-4 h-4 text-[#0A0A0A]" />
-                <span>Back to All Sectors</span>
+                <span>All Sectors</span>
               </Link>
             </div>
           </div>

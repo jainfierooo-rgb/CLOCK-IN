@@ -20,7 +20,8 @@ import {
   Factory, 
   ShoppingBag, 
   CreditCard, 
-  Truck
+  Truck,
+  Mail
 } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -672,31 +673,39 @@ export default function ArchitecturePage() {
           </h2>
 
           <p className="text-xs sm:text-sm text-[#5A5852] leading-relaxed max-w-xl mx-auto">
-            Speak directly with an AI systems architect from our Kerala Tech Hub. We deliver an operational feasibility and schema audit in under 48 hours.
+            Speak directly with an AI systems architect from our global team. We deliver an operational feasibility and schema audit in under 48 hours.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-2">
             <a
               href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20architecture%20and%20deployment."
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-teal-primary w-full sm:w-auto px-8 py-3.5 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-xs"
+              className="btn-teal-primary w-full sm:w-auto px-7 py-3.5 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-xs"
             >
               <MessageSquare className="w-4 h-4 text-white" />
-              <span>Dispatch on WhatsApp (+91 88485 63824)</span>
+              <span>WhatsApp (+91 88485 63824)</span>
+            </a>
+
+            <a
+              href="mailto:partners@clockin.ai?subject=Architecture%20Inquiry%20-%20Clockin%20AI&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20inquire%20about%20your%20architecture%20and%20deployment%20process.%0A%0ACompany%3A%0APhone%3A"
+              className="btn-dark-primary w-full sm:w-auto px-7 py-3.5 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <Mail className="w-4 h-4 text-[#0A0A0A]" />
+              <span>Email Lead Architect</span>
             </a>
 
             <a
               href="tel:+918848563824"
-              className="btn-dark-primary w-full sm:w-auto px-8 py-3.5 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-6 py-3.5 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 border border-[#EAE6DF] rounded-xl text-[#0A0A0A] hover:bg-[#FAF8F5] transition-colors"
             >
               <PhoneCall className="w-4 h-4 text-[#0A0A0A]" />
-              <span>Call Lead Architect</span>
+              <span>Call Hotline</span>
             </a>
           </div>
 
           <div className="text-xs font-mono text-[#7A7770] pt-4">
-            KERALA, INDIA // DIRECT ARCHITECTURE HOTLINE: +91 88485 63824
+            WORLDWIDE // DIRECT ARCHITECTURE HOTLINE: +91 88485 63824
           </div>
         </div>
       </section>

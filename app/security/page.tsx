@@ -135,14 +135,14 @@ export default function SecurityPage() {
             Security &amp; Vulnerability Reporting
           </h2>
           <p className="text-xs text-[#5A5852] leading-relaxed">
-            Security researchers, enterprise auditors, and partners may contact our direct Cyber Defense desk in Kerala:
+            Security researchers, enterprise auditors, and partners may contact our direct Cyber Defense desk worldwide:
           </p>
           <div className="text-xs font-mono text-[#0A0A0A] space-y-1">
             <div>Clockin AI Security &amp; Tech Desk</div>
-            <div>Kerala Tech &amp; Operations Hub, India</div>
+            <div>Worldwide Tech &amp; Operations Hub</div>
             <div>Hotline: <a href="tel:+918848563824" className="font-bold underline">+91 88485 63824</a></div>
             <div>WhatsApp: <a href="https://wa.me/918848563824" className="font-bold underline">+91 88485 63824</a></div>
-            <div>Email: <span className="font-bold">partners@clockin.ai</span></div>
+            <div>Email: <a href="mailto:partners@clockin.ai?subject=Security%20Inquiry%20-%20Clockin%20AI" className="font-bold underline hover:text-[#5A5852]">partners@clockin.ai</a></div>
           </div>
         </section>
 

@@ -129,7 +129,7 @@ export default function ProcessWorkflow() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-[#0A0A0A] rounded-3xl p-6 sm:p-10 lg:p-14 border border-white/10 shadow-2xl mb-20 relative overflow-hidden text-white"
+          className="bg-[#0A0A0A] rounded-2xl sm:rounded-3xl p-4 sm:p-10 lg:p-14 border border-white/10 shadow-2xl mb-20 relative overflow-hidden text-white"
         >
           
           {/* Subtle Technical Grid Background */}
@@ -146,7 +146,7 @@ export default function ProcessWorkflow() {
             <div className="flex items-center gap-3">
               <span className="w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)] animate-pulse"></span>
               <span className="font-bold text-white tracking-wider uppercase">
-                CLOSED-LOOP SLM ORBITAL ENGINE // INDIA CLUSTER
+                CLOSED-LOOP SLM ORBITAL ENGINE // WORLDWIDE CLUSTERS
               </span>
             </div>
             
@@ -164,7 +164,7 @@ export default function ProcessWorkflow() {
             
             {/* Left: Responsive Interactive SVG Circular Loop */}
             <div className="lg:col-span-6 flex flex-col items-center justify-center">
-              <div className="w-full max-w-[440px] aspect-square relative select-none">
+              <div className="w-full max-w-[440px] aspect-square relative select-none mx-auto p-1 sm:p-2">
                 
                 <svg 
                   viewBox="0 0 540 540" 
@@ -472,7 +472,7 @@ export default function ProcessWorkflow() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-[#FFF8F8] rounded-3xl p-8 sm:p-10 border border-red-200 relative flex flex-col justify-between space-y-6 shadow-md text-[#1A1A1A]"
+              className="bg-[#FFF8F8] rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 border border-red-200 relative flex flex-col justify-between space-y-6 shadow-md text-[#1A1A1A]"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between pb-4 border-b border-red-200">
@@ -540,7 +540,7 @@ export default function ProcessWorkflow() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-white rounded-3xl p-8 sm:p-10 border-2 border-[#0A0A0A] shadow-xl relative flex flex-col justify-between space-y-6 text-[#0A0A0A]"
+              className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 border-2 border-[#0A0A0A] shadow-xl relative flex flex-col justify-between space-y-6 text-[#0A0A0A]"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between pb-4 border-b border-[#EAE6DF]">
@@ -636,11 +636,11 @@ export default function ProcessWorkflow() {
                 HIGH-RESOLUTION NEURAL ARCHITECTURE BLUEPRINT
               </div>
 
-              <div className="rounded-2xl overflow-hidden border border-white/10">
+              <div className="rounded-2xl overflow-hidden border border-white/10 bg-black flex items-center justify-center p-2">
                 <img 
                   src="/architecture-diagram.jpg" 
                   alt="Clockin AI Closed-Loop SLM Architecture"
-                  className="w-full h-auto object-cover max-h-[75vh]"
+                  className="w-full h-auto object-contain max-h-[75vh] mx-auto"
                 />
               </div>
 
