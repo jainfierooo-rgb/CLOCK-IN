@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <!-- Icon Mark -->
+  <rect x="30" y="30" width="140" height="140" rx="32" fill="#0A0A0A" />
+  <g transform="translate(56, 56) scale(3.666)" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="12 2 2 7 12 12 22 7 12 2" />
+    <polyline points="2 17 12 22 22 17" />
+    <polyline points="2 12 12 17 22 12" />
+  </g>
+  <!-- Typography -->
+  <text x="200" y="125" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="76" letter-spacing="-1.5" fill="#0A0A0A">CLOCKIN<tspan fill="#8A8780">.AI</tspan></text>
+</svg>
