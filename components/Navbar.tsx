@@ -67,7 +67,7 @@ export default function Navbar() {
             </a>
 
             <a
-              href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20services."
+              href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20solutions."
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 btn-teal-primary text-xs font-semibold shadow-xs"
@@ -79,7 +79,7 @@ export default function Navbar() {
           {/* Mobile Menu Trigger */}
           <div className="flex items-center gap-2 sm:hidden">
             <a
-              href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20services."
+              href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20solutions."
               target="_blank"
               rel="noopener noreferrer"
               className="px-3 py-1.5 btn-teal-primary text-[11px] font-semibold rounded-full"
@@ -159,7 +159,7 @@ export default function Navbar() {
               {/* Mobile Action Buttons */}
               <div className="pt-2 space-y-2.5">
                 <a
-                  href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20services."
+                  href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20solutions."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full text-center py-3 btn-teal-primary text-xs font-bold uppercase tracking-wider block shadow-xs"
@@ -168,7 +168,7 @@ export default function Navbar() {
                 </a>
 
                 <a
-                  href="mailto:info@clockinai.net?subject=Inquiry%20regarding%20Clockin%20AI%20Services&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20inquire%20about%20custom%20AI%20services.%0A%0ACompany%3A%0APhone%3A%0ARequirement%3A"
+                  href="mailto:info@clockinai.net?subject=Inquiry%20regarding%20Clockin%20AI%20Solutions&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20inquire%20about%20custom%20AI%20solutions.%0A%0ACompany%3A%0APhone%3A%0ARequirement%3A"
                   className="w-full text-center py-3 btn-dark-primary text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 shadow-xs"
                 >
                   <Mail className="w-4 h-4" />

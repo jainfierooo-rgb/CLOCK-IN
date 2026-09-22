@@ -187,7 +187,7 @@ export default function IndustriesSection() {
               </a>
 
               <a
-                href="mailto:info@clockinai.net?subject=Inquiry%20regarding%20Custom%20Industry%20Takeover%20-%20Clockin%20AI&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20discuss%20custom%20AI%20services%20for%20our%20enterprise.%0A%0ACompany%20Name%3A%0AIndustry%2FSector%3A%0APrimary%20Operational%20Bottleneck%3A"
+                href="mailto:info@clockinai.net?subject=Inquiry%20regarding%20Custom%20Industry%20Takeover%20-%20Clockin%20AI&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20discuss%20custom%20AI%20solutions%20for%20our%20enterprise.%0A%0ACompany%20Name%3A%0AIndustry%2FSector%3A%0APrimary%20Operational%20Bottleneck%3A"
                 className="btn-dark-primary px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-center flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Mail className="w-4 h-4 text-[#0A0A0A]" />

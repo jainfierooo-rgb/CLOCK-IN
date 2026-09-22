@@ -11,11 +11,11 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'CLOCKIN AI — We Provide AI Services | 101x More Valuable',
+  title: 'CLOCKIN AI — We Provide AI Solutions | 101x More Valuable',
   description:
-    'We provide full-spectrum AI services from bottom to top. Turnkey architecture deployed across hospitals, luxury resorts, manufacturing plants, and adaptable commercial sectors.',
+    'We provide full-spectrum AI solutions from bottom to top. Turnkey architecture deployed across hospitals, luxury resorts, manufacturing plants, and adaptable commercial sectors.',
   openGraph: {
-    title: 'CLOCKIN AI — Turnkey AI Services',
+    title: 'CLOCKIN AI — Turnkey AI Solutions',
     description: 'We make your business 101 times more worthy through custom autonomous intelligence.',
     type: 'website',
   },

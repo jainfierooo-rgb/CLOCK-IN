@@ -10,11 +10,11 @@ const slides = [
     id: 1,
     image: '/slide-business-ai.jpg',
     tag: 'CUSTOM AI ENGINEERING & AUTOMATION',
-    titleLine1: 'We Provide AI Services.',
+    titleLine1: 'We Provide AI Solutions.',
     titleLine2: 'Tailored For Real Business Results.',
-    desc: 'Clockin AI builds and deploys practical AI systems for modern businesses across luxury hospitality, clinical networks, manufacturing, and retail.',
+    desc: 'Clockin AI builds and deploys practical AI solutions for modern businesses across luxury hospitality, clinical networks, manufacturing, and retail.',
     primaryCta: 'Contact Our Team',
-    primaryLink: 'https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20services.',
+    primaryLink: 'https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20solutions.',
     secondaryCta: 'How It Works',
     secondaryLink: '/architecture',
   },
@@ -80,7 +80,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#E2DDD5] text-[11px] font-mono tracking-widest text-[#5A5852] uppercase font-bold shadow-xs"
           >
             <span className="w-2 h-2 rounded-full bg-[#0A0A0A] animate-pulse"></span>
-            <span>CUSTOM AI SERVICES // WORLDWIDE</span>
+            <span>CUSTOM AI SOLUTIONS // WORLDWIDE</span>
           </motion.div>
 
           {/* Master Bold Headlines */}
@@ -91,7 +91,7 @@ export default function Hero() {
             className="space-y-1 sm:space-y-2"
           >
             <h1 className="font-extrabold text-3xl sm:text-5xl lg:text-7xl text-[#0A0A0A] tracking-tight leading-[1.12]">
-              We Provide AI Services.
+              We Provide AI Solutions.
             </h1>
             <h2 className="font-extrabold text-3xl sm:text-5xl lg:text-7xl text-[#0A0A0A] tracking-tight leading-[1.12]">
               Built For <span className="underline decoration-[#0A0A0A]/20 underline-offset-8">Real Business Results</span>.
@@ -105,7 +105,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-xs sm:text-base lg:text-lg text-[#5A5852] leading-relaxed max-w-2xl mx-auto font-normal px-1 sm:px-0"
           >
-            Our team builds and manages custom AI systems for businesses across luxury hospitality, clinical networks, manufacturing, and retail—turning manual bottlenecks into seamless automation.
+            Our team builds and manages custom AI solutions for businesses across luxury hospitality, clinical networks, manufacturing, and retail—turning manual bottlenecks into seamless automation.
           </motion.p>
 
           {/* Action Buttons */}
@@ -116,7 +116,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 pt-1 w-full max-w-sm sm:max-w-none mx-auto"
           >
             <a
-              href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20services."
+              href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20solutions."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-teal-primary w-full sm:w-auto px-6 py-3 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all cursor-pointer"
@@ -126,7 +126,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="mailto:info@clockinai.net?subject=Inquiry%20regarding%20Clockin%20AI%20Services&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20learn%20more%20about%20your%20custom%20AI%20engineering%20services.%0A%0ACompany%3A%0APhone%3A%0ARequirement%3A"
+              href="mailto:info@clockinai.net?subject=Inquiry%20regarding%20Clockin%20AI%20Solutions&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20learn%20more%20about%20your%20custom%20AI%20engineering%20solutions.%0A%0ACompany%3A%0APhone%3A%0ARequirement%3A"
               className="btn-dark-primary w-full sm:w-auto px-6 py-3 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 shadow-xs cursor-pointer"
             >
               <Mail className="w-4 h-4" />

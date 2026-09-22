@@ -152,7 +152,7 @@ export default function ArchitecturePage() {
         </div>
       </section>
 
-      {/* How Our Team Delivers AI Services Across Industries */}
+      {/* How Our Team Delivers AI Solutions Across Industries */}
       <section id="services" className="py-24 border-b border-[#EAE6DF] bg-white">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-12">
           
@@ -165,7 +165,7 @@ export default function ArchitecturePage() {
               </div>
 
               <h2 className="font-extrabold text-3xl sm:text-4xl text-[#0A0A0A] tracking-tight">
-                How Our Team Delivers AI Services For Your Business
+                How Our Team Delivers AI Solutions For Your Business
               </h2>
 
               <p className="text-sm sm:text-base text-[#5A5852] leading-relaxed">
@@ -269,7 +269,7 @@ export default function ArchitecturePage() {
                     Ready to discuss your business requirements?
                   </div>
                   <a
-                    href="https://wa.me/918848563824?text=Hello%2C%20I%20would%20like%20to%20discuss%20custom%20AI%20services%20for%20our%20business."
+                    href="https://wa.me/918848563824?text=Hello%2C%20I%20would%20like%20to%20discuss%20custom%20AI%20solutions%20for%20our%20business."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-teal-primary px-5 py-2.5 rounded-xl font-bold uppercase text-xs tracking-wider"

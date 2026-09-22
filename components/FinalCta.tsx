@@ -55,7 +55,7 @@ export default function FinalCta() {
           <motion.a
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20services."
+            href="https://wa.me/918848563824?text=Inquiry%20regarding%20Clockin%20AI%20enterprise%20solutions."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-teal-primary w-full sm:w-auto px-7 py-3.5 text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg"
@@ -67,7 +67,7 @@ export default function FinalCta() {
           <motion.a
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            href="mailto:info@clockinai.net?subject=Inquiry%20regarding%20Clockin%20AI%20Services&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20inquire%20about%20custom%20AI%20services.%0A%0ACompany%20Name%3A%0AContact%20Phone%3A%0ABusiness%20Need%3A"
+            href="mailto:info@clockinai.net?subject=Inquiry%20regarding%20Clockin%20AI%20Solutions&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20inquire%20about%20custom%20AI%20solutions.%0A%0ACompany%20Name%3A%0AContact%20Phone%3A%0ABusiness%20Need%3A"
             className="btn-dark-primary w-full sm:w-auto px-7 py-3.5 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer"
           >
             <Mail className="w-4 h-4 text-[#0A0A0A]" />

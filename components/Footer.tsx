@@ -250,7 +250,7 @@ export default function Footer() {
             <div className="text-xs text-neutral-400 space-y-3 leading-relaxed font-mono">
               <div className="space-y-2">
                 <a
-                  href="mailto:info@clockinai.net?subject=Inquiry%20regarding%20Clockin%20AI%20Services&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20are%20interested%20in%20exploring%20custom%20AI%20services%20for%20our%20operations.%0A%0ACompany%3A%0APhone%3A%0ABrief%20Requirement%3A"
+                  href="mailto:info@clockinai.net?subject=Inquiry%20regarding%20Clockin%20AI%20Solutions&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20are%20interested%20in%20exploring%20custom%20AI%20solutions%20for%20our%20operations.%0A%0ACompany%3A%0APhone%3A%0ABrief%20Requirement%3A"
                   className="flex items-center gap-2 text-white font-semibold hover:text-neutral-300 transition-colors group cursor-pointer"
                   title="Send email to info@clockinai.net"
                 >
