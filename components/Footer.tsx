@@ -250,20 +250,12 @@ export default function Footer() {
             <div className="text-xs text-neutral-400 space-y-3 leading-relaxed font-mono">
               <div className="space-y-2">
                 <a
-                  href="mailto:partners@clockin.ai?subject=Inquiry%20regarding%20Clockin%20AI%20Services&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20are%20interested%20in%20exploring%20custom%20AI%20services%20for%20our%20operations.%0A%0ACompany%3A%0APhone%3A%0ABrief%20Requirement%3A"
+                  href="mailto:info@clockinai.net?subject=Inquiry%20regarding%20Clockin%20AI%20Services&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20are%20interested%20in%20exploring%20custom%20AI%20services%20for%20our%20operations.%0A%0ACompany%3A%0APhone%3A%0ABrief%20Requirement%3A"
                   className="flex items-center gap-2 text-white font-semibold hover:text-neutral-300 transition-colors group cursor-pointer"
-                  title="Send email to partners@clockin.ai"
+                  title="Send email to info@clockinai.net"
                 >
                   <Mail className="w-3.5 h-3.5 text-neutral-300 group-hover:text-white shrink-0" />
-                  <span className="underline decoration-white/30 underline-offset-4 group-hover:decoration-white">partners@clockin.ai</span>
-                </a>
-                <a
-                  href="mailto:support@clockin.ai?subject=Support%20Request%20-%20Clockin%20AI"
-                  className="flex items-center gap-2 text-neutral-300 hover:text-white transition-colors group cursor-pointer"
-                  title="Send email to support@clockin.ai"
-                >
-                  <Mail className="w-3.5 h-3.5 text-neutral-400 group-hover:text-white shrink-0" />
-                  <span className="underline decoration-white/20 underline-offset-4 group-hover:decoration-white">support@clockin.ai</span>
+                  <span className="underline decoration-white/30 underline-offset-4 group-hover:decoration-white">info@clockinai.net</span>
                 </a>
               </div>
 
@@ -274,7 +266,7 @@ export default function Footer() {
 
               <div className="pt-2 flex flex-col gap-2">
                 <a
-                  href="mailto:partners@clockin.ai?subject=Direct%20Inquiry%20-%20Clockin%20AI"
+                  href="mailto:info@clockinai.net?subject=Direct%20Inquiry%20-%20Clockin%20AI"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-white hover:text-neutral-300 transition-colors"
                 >
                   <Mail className="w-3.5 h-3.5 text-white" />

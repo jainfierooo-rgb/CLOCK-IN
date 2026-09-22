@@ -533,7 +533,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
               </a>
 
               <a
-                href={`mailto:partners@clockin.ai?subject=Inquiry%20regarding%20Clockin%20AI%20for%20${encodeURIComponent(sector.name)}&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20inquire%20about%20your%20AI%20solutions%20for%20${encodeURIComponent(sector.name)}.%0A%0ACompany%3A%0APhone%3A%0ARequirement%3A`}
+                href={`mailto:info@clockinai.net?subject=Inquiry%20regarding%20Clockin%20AI%20for%20${encodeURIComponent(sector.name)}&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20inquire%20about%20your%20AI%20solutions%20for%20${encodeURIComponent(sector.name)}.%0A%0ACompany%3A%0APhone%3A%0ARequirement%3A`}
                 className="btn-dark-primary w-full sm:w-auto px-7 py-3.5 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Mail className="w-4 h-4 text-[#0A0A0A]" />

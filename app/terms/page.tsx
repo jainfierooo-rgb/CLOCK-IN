@@ -96,7 +96,7 @@ export default function TermsPage() {
             <span className="hidden sm:inline text-neutral-300">|</span>
             <span>WhatsApp: <a href="https://wa.me/918848563824" className="font-bold underline">+91 88485 63824</a></span>
             <span className="hidden sm:inline text-neutral-300">|</span>
-            <span>Email: <a href="mailto:partners@clockin.ai?subject=Terms%20and%20SLA%20Inquiry%20-%20Clockin%20AI" className="font-bold underline">partners@clockin.ai</a></span>
+            <span>Email: <a href="mailto:info@clockinai.net?subject=Terms%20and%20SLA%20Inquiry%20-%20Clockin%20AI" className="font-bold underline">info@clockinai.net</a></span>
           </div>
         </section>
 

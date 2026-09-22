@@ -688,7 +688,7 @@ export default function ArchitecturePage() {
             </a>
 
             <a
-              href="mailto:partners@clockin.ai?subject=Architecture%20Inquiry%20-%20Clockin%20AI&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20inquire%20about%20your%20architecture%20and%20deployment%20process.%0A%0ACompany%3A%0APhone%3A"
+              href="mailto:info@clockinai.net?subject=Architecture%20Inquiry%20-%20Clockin%20AI&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20inquire%20about%20your%20architecture%20and%20deployment%20process.%0A%0ACompany%3A%0APhone%3A"
               className="btn-dark-primary w-full sm:w-auto px-7 py-3.5 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer"
             >
               <Mail className="w-4 h-4 text-[#0A0A0A]" />

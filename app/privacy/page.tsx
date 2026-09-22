@@ -104,7 +104,7 @@ export default function PrivacyPage() {
             <div>Worldwide Tech &amp; Operations Hub</div>
             <div>Direct Telephone: <a href="tel:+918848563824" className="font-bold underline">+91 88485 63824</a></div>
             <div>Direct WhatsApp: <a href="https://wa.me/918848563824" className="font-bold underline">+91 88485 63824</a></div>
-            <div>Email: <a href="mailto:partners@clockin.ai?subject=Privacy%20Inquiry%20-%20Clockin%20AI" className="font-bold underline hover:text-[#5A5852]">partners@clockin.ai</a></div>
+            <div>Email: <a href="mailto:info@clockinai.net?subject=Privacy%20Inquiry%20-%20Clockin%20AI" className="font-bold underline hover:text-[#5A5852]">info@clockinai.net</a></div>
           </div>
         </section>
 

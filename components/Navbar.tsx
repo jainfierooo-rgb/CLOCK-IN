@@ -168,11 +168,11 @@ export default function Navbar() {
                 </a>
 
                 <a
-                  href="mailto:partners@clockin.ai?subject=Inquiry%20regarding%20Clockin%20AI%20Services&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20inquire%20about%20custom%20AI%20services.%0A%0ACompany%3A%0APhone%3A%0ARequirement%3A"
+                  href="mailto:info@clockinai.net?subject=Inquiry%20regarding%20Clockin%20AI%20Services&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20inquire%20about%20custom%20AI%20services.%0A%0ACompany%3A%0APhone%3A%0ARequirement%3A"
                   className="w-full text-center py-3 btn-dark-primary text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 shadow-xs"
                 >
                   <Mail className="w-4 h-4" />
-                  <span>Email partners@clockin.ai</span>
+                  <span>Email info@clockinai.net</span>
                 </a>
 
                 <div className="text-center text-[10px] font-mono text-[#7A7770] pt-1 uppercase">

@@ -126,7 +126,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="mailto:partners@clockin.ai?subject=Inquiry%20regarding%20Clockin%20AI%20Services&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20learn%20more%20about%20your%20custom%20AI%20engineering%20services.%0A%0ACompany%3A%0APhone%3A%0ARequirement%3A"
+              href="mailto:info@clockinai.net?subject=Inquiry%20regarding%20Clockin%20AI%20Services&body=Hello%20Clockin%20AI%20Team%2C%0A%0AWe%20would%20like%20to%20learn%20more%20about%20your%20custom%20AI%20engineering%20services.%0A%0ACompany%3A%0APhone%3A%0ARequirement%3A"
               className="btn-dark-primary w-full sm:w-auto px-6 py-3 text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 shadow-xs cursor-pointer"
             >
               <Mail className="w-4 h-4" />
