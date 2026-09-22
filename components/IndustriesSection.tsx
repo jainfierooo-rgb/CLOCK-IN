@@ -63,8 +63,8 @@ const industriesList = [
 
 export default function IndustriesSection() {
   return (
-    <section id="industries" className="py-28 sm:py-36 bg-white text-[#0A0A0A] overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-12">
+    <section id="industries" className="py-14 sm:py-24 lg:py-32 bg-white text-[#0A0A0A] overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12">
         
         {/* Bold Takeover Header with Entrance Animation */}
         <motion.div 
@@ -72,23 +72,23 @@ export default function IndustriesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-4xl mb-20"
+          className="max-w-4xl mb-10 sm:mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5] border border-[#EAE6DF] text-[10px] font-mono tracking-widest uppercase text-[#63615A] font-bold mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#EAE6DF] text-[9.5px] sm:text-[10px] font-mono tracking-widest uppercase text-[#63615A] font-bold mb-3 sm:mb-4">
             <span>UNIVERSAL DOMAIN TAKEOVER // ALL ENTERPRISE SECTORS</span>
           </div>
 
-          <h2 className="font-extrabold text-3xl sm:text-5xl lg:text-6xl text-[#0A0A0A] tracking-tight leading-[1.1] mb-6">
+          <h2 className="font-extrabold text-2xl sm:text-4xl lg:text-6xl text-[#0A0A0A] tracking-tight leading-[1.12] mb-3 sm:mb-6">
             We take over complex operations across any industry.
           </h2>
 
-          <p className="text-sm sm:text-base lg:text-lg text-[#5A5852] leading-relaxed font-normal max-w-3xl">
+          <p className="text-xs sm:text-base lg:text-lg text-[#5A5852] leading-relaxed font-normal max-w-3xl">
             Whether in luxury hospitality, clinical hospital networks, precision manufacturing foundries, or custom multi-tier enterprise domains. Clockin AI ingests your messy physical operational reality, eliminates human bottlenecks, and compounds your business valuation by 101×.
           </p>
         </motion.div>
 
         {/* Professional 6-Sector Architectural Grid with Staggered Motion */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-10 sm:mb-16">
           {industriesList.map((item, idx) => (
             <motion.div
               key={item.slug}
@@ -97,7 +97,7 @@ export default function IndustriesSection() {
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.6, delay: idx * 0.08, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="bg-[#FAF8F5] hover:bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[#EAE6DF] hover:border-[#0A0A0A] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+              className="bg-[#FAF8F5] hover:bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-[#EAE6DF] hover:border-[#0A0A0A] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
             >
               <div>
                 {/* Top Sector Badge & Impact Pill */}
@@ -158,7 +158,7 @@ export default function IndustriesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-[#FAF8F5] rounded-2xl sm:rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#EAE6DF] relative overflow-hidden shadow-lg text-[#0A0A0A]"
+          className="bg-[#FAF8F5] rounded-2xl sm:rounded-3xl p-5 sm:p-10 lg:p-12 border border-[#EAE6DF] relative overflow-hidden shadow-lg text-[#0A0A0A]"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             

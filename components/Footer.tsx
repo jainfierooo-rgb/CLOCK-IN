@@ -16,11 +16,11 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-[#1C1C1C] bg-[#0A0A0A] text-white pt-20 pb-14 transition-colors selection:bg-white selection:text-black">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-12">
+    <footer className="border-t border-[#1C1C1C] bg-[#0A0A0A] text-white pt-12 sm:pt-20 pb-10 sm:pb-14 transition-colors selection:bg-white selection:text-black">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12">
         
         {/* Top Brand & Executive Briefing Bar */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-16 border-b border-white/10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 pb-10 sm:pb-16 border-b border-white/10 items-start">
           
           {/* Brand Column */}
           <div className="lg:col-span-6 space-y-4">
@@ -56,7 +56,7 @@ export default function Footer() {
                   <span>Subscribed. Technical briefings will be dispatched to your inbox.</span>
                 </div>
               ) : (
-                <form onSubmit={handleSubscribe} className="flex gap-2">
+                <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2">
                   <input
                     type="email"
                     required
@@ -79,7 +79,7 @@ export default function Footer() {
         </div>
 
         {/* 5-Column Enterprise Directory with 100% Real Navigable Links */}
-        <div className="py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-10 border-b border-white/10">
+        <div className="py-10 sm:py-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-10 border-b border-white/10">
           
           {/* Column 1: Sector Takeovers */}
           <div className="space-y-4">
@@ -243,7 +243,7 @@ export default function Footer() {
           </div>
 
           {/* Column 5: Direct Dispatch (Standardized to 8848563824) */}
-          <div className="space-y-4">
+          <div className="col-span-2 sm:col-span-1 space-y-4">
             <div className="text-xs font-mono font-extrabold tracking-wider uppercase text-white">
               Direct Inquiries
             </div>

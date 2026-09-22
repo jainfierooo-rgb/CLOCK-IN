@@ -211,22 +211,22 @@ export default function LiveConciergeDemo() {
   };
 
   return (
-    <section id="demo" className="py-24 bg-white border-b border-[#EAE6DF] text-[#0A0A0A] overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-12">
+    <section id="demo" className="py-12 sm:py-24 bg-white border-b border-[#EAE6DF] text-[#0A0A0A] overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12">
         
         {/* Section Top Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
-          <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5] border border-[#EAE6DF] text-[10px] font-mono tracking-widest uppercase text-[#63615A] font-bold shadow-xs">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 sm:mb-16 gap-4 sm:gap-6">
+          <div className="max-w-3xl space-y-3 sm:space-y-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#EAE6DF] text-[9.5px] sm:text-[10px] font-mono tracking-widest uppercase text-[#63615A] font-bold shadow-xs">
               <Terminal className="w-3.5 h-3.5 text-[#0A0A0A]" />
               <span>AUTONOMOUS TELEMETRY ENGINE // VIDEO-LIKE AUTO SIMULATION</span>
             </div>
 
-            <h2 className="font-extrabold text-3xl sm:text-5xl lg:text-6xl text-[#0A0A0A] tracking-tight leading-[1.1]">
+            <h2 className="font-extrabold text-2xl sm:text-4xl lg:text-6xl text-[#0A0A0A] tracking-tight leading-[1.12]">
               Watch Clockin AI execute in real time.
             </h2>
 
-            <p className="text-sm sm:text-base lg:text-lg text-[#5A5852] leading-relaxed font-normal">
+            <p className="text-xs sm:text-base lg:text-lg text-[#5A5852] leading-relaxed font-normal">
               Zero manual typing required. Watch how our domain SLM processes enterprise queries, writes directly to ERP ledgers, and generates real-time telemetry graphs instantaneously.
             </p>
           </div>
@@ -268,61 +268,63 @@ export default function LiveConciergeDemo() {
         </div>
 
         {/* Main Interface Layout: Scenario Selector (Left) + Multi-Modal Terminal (Right) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-start">
           
-          {/* Left: Interactive 4-Sector Scenario Deck */}
-          <div className="lg:col-span-4 space-y-3">
-            <div className="text-[11px] font-mono uppercase tracking-wider text-[#7A7770] font-bold px-1 mb-2">
+          {/* Left: Interactive 4-Sector Scenario Deck (2x2 on mobile, vertical rail on desktop) */}
+          <div className="lg:col-span-4 space-y-2 sm:space-y-3">
+            <div className="text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-[#7A7770] font-bold px-1 mb-1">
               Select Sector Scenario ({currentIdx + 1} / 4):
             </div>
 
-            {scenarios.map((sc, idx) => {
-              const isSelected = currentIdx === idx;
-              return (
-                <button
-                  key={sc.id}
-                  onClick={() => handleSelectScenario(idx)}
-                  className={`w-full text-left p-4 sm:p-5 rounded-2xl transition-all duration-300 border flex flex-col justify-between cursor-pointer relative overflow-hidden ${
-                    isSelected
-                      ? 'bg-white border-[#0A0A0A] shadow-md ring-1 ring-[#0A0A0A]/10'
-                      : 'bg-[#FAF8F5] border-[#EAE6DF] hover:bg-white hover:border-[#BFB8AA]'
-                  }`}
-                >
-                  {/* Active Progress Bar Underlay on Active Tab */}
-                  {isSelected && isPlaying && (
-                    <div 
-                      className="absolute bottom-0 left-0 top-0 bg-[#0A0A0A]/[0.03] transition-all duration-100 pointer-events-none"
-                      style={{ width: `${progress}%` }}
-                    />
-                  )}
+            <div className="grid grid-cols-2 lg:grid-cols-1 gap-2 sm:gap-3">
+              {scenarios.map((sc, idx) => {
+                const isSelected = currentIdx === idx;
+                return (
+                  <button
+                    key={sc.id}
+                    onClick={() => handleSelectScenario(idx)}
+                    className={`text-left p-3 sm:p-5 rounded-xl sm:rounded-2xl transition-all duration-300 border flex flex-col justify-between cursor-pointer relative overflow-hidden ${
+                      isSelected
+                        ? 'bg-white border-[#0A0A0A] shadow-md ring-1 ring-[#0A0A0A]/10'
+                        : 'bg-[#FAF8F5] border-[#EAE6DF] hover:bg-white hover:border-[#BFB8AA]'
+                    }`}
+                  >
+                    {/* Active Progress Bar Underlay on Active Tab */}
+                    {isSelected && isPlaying && (
+                      <div 
+                        className="absolute bottom-0 left-0 top-0 bg-[#0A0A0A]/[0.03] transition-all duration-100 pointer-events-none"
+                        style={{ width: `${progress}%` }}
+                      />
+                    )}
 
-                  <div className="flex items-center justify-between pb-2 border-b border-[#EAE6DF]/60 relative z-10">
-                    <span className="text-[10px] font-mono font-bold text-[#7A7770] tracking-wider">
-                      SCENARIO 0{sc.id}
-                    </span>
-                    <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded ${
-                      isSelected ? 'bg-[#0A0A0A] text-white' : 'bg-white text-[#5A5852] border border-[#EAE6DF]'
-                    }`}>
-                      {sc.latency}
-                    </span>
-                  </div>
+                    <div className="flex items-center justify-between pb-1.5 sm:pb-2 border-b border-[#EAE6DF]/60 relative z-10">
+                      <span className="text-[9px] sm:text-[10px] font-mono font-bold text-[#7A7770] tracking-wider">
+                        0{sc.id}
+                      </span>
+                      <span className={`text-[9px] sm:text-[10px] font-mono font-bold px-1.5 py-0.5 rounded ${
+                        isSelected ? 'bg-[#0A0A0A] text-white' : 'bg-white text-[#5A5852] border border-[#EAE6DF]'
+                      }`}>
+                        {sc.latency}
+                      </span>
+                    </div>
 
-                  <div className="pt-3 space-y-1 relative z-10">
-                    <h3 className={`font-bold text-sm sm:text-base tracking-tight ${
-                      isSelected ? 'text-[#0A0A0A]' : 'text-[#4A4A46]'
-                    }`}>
-                      {sc.sector}
-                    </h3>
-                    <p className="text-xs text-[#6A6862] line-clamp-1 font-mono">
-                      {sc.tag}
-                    </p>
-                  </div>
-                </button>
-              );
-            })}
+                    <div className="pt-2 sm:pt-3 space-y-0.5 relative z-10">
+                      <h3 className={`font-bold text-xs sm:text-base tracking-tight truncate ${
+                        isSelected ? 'text-[#0A0A0A]' : 'text-[#4A4A46]'
+                      }`}>
+                        {sc.sector}
+                      </h3>
+                      <p className="text-[10px] sm:text-xs text-[#6A6862] line-clamp-1 font-mono hidden sm:block">
+                        {sc.tag}
+                      </p>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
 
             {/* Hardware Telemetry Badge */}
-            <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE6DF] text-xs font-mono text-[#5A5852] space-y-1.5">
+            <div className="hidden sm:block p-4 rounded-2xl bg-[#FAF8F5] border border-[#EAE6DF] text-xs font-mono text-[#5A5852] space-y-1.5">
               <div className="flex items-center justify-between font-bold text-[#0A0A0A]">
                 <span>DETERMINISTIC BOUNDARY</span>
                 <span className="text-[#0A0A0A]">{activeScenario.confidence}</span>

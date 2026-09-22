@@ -96,10 +96,10 @@ export default function ProcessWorkflow() {
   const activeStep = loopSteps.find((s) => s.id === activeId) || loopSteps[2];
 
   return (
-    <section id="flowchart" className="py-28 sm:py-36 bg-[#FAF8F5] text-[#0A0A0A] border-y border-[#EAE6DF] overflow-hidden relative">
+    <section id="flowchart" className="py-14 sm:py-24 lg:py-32 bg-[#FAF8F5] text-[#0A0A0A] border-y border-[#EAE6DF] overflow-hidden relative">
       <div id="architecture" className="absolute -top-24 left-0 pointer-events-none" />
       <div id="process" className="absolute -top-24 left-0 pointer-events-none" />
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-12">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12">
         
         {/* Section Header */}
         <motion.div 
@@ -107,18 +107,18 @@ export default function ProcessWorkflow() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-4xl mb-16"
+          className="max-w-4xl mb-10 sm:mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#EAE6DF] text-[10px] font-mono tracking-widest uppercase text-[#63615A] font-bold mb-4 shadow-2xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#EAE6DF] text-[9.5px] sm:text-[10px] font-mono tracking-widest uppercase text-[#63615A] font-bold mb-3 sm:mb-4 shadow-2xs">
             <GitBranch className="w-3.5 h-3.5 text-[#0A0A0A]" />
             <span>NEURAL INFRASTRUCTURE // THE CLOCKIN SLM LOOP</span>
           </div>
 
-          <h2 className="font-extrabold text-3xl sm:text-5xl lg:text-6xl text-[#0A0A0A] tracking-tight leading-[1.1] mb-6">
+          <h2 className="font-extrabold text-2xl sm:text-4xl lg:text-6xl text-[#0A0A0A] tracking-tight leading-[1.12] mb-3 sm:mb-6">
             Agentic. Autonomous. Self-Reinforcing.
           </h2>
 
-          <p className="text-sm sm:text-base lg:text-lg text-[#5A5852] leading-relaxed font-normal max-w-3xl">
+          <p className="text-xs sm:text-base lg:text-lg text-[#5A5852] leading-relaxed font-normal max-w-3xl">
             A closed-loop autonomous intelligence architecture. We ingest fragmented enterprise data, construct dynamic context graphs, fine-tune domain-specific Small Language Models (SLMs), and compound valuation by 101× through continuous evaluation.
           </p>
         </motion.div>
@@ -129,7 +129,7 @@ export default function ProcessWorkflow() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-[#0A0A0A] rounded-2xl sm:rounded-3xl p-4 sm:p-10 lg:p-14 border border-white/10 shadow-2xl mb-20 relative overflow-hidden text-white"
+          className="bg-[#0A0A0A] rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-14 border border-white/10 shadow-2xl mb-12 sm:mb-20 relative overflow-hidden text-white"
         >
           
           {/* Subtle Technical Grid Background */}
@@ -364,12 +364,12 @@ export default function ProcessWorkflow() {
             <div className="lg:col-span-6 space-y-4">
               
               {/* Glassmorphic Header Card */}
-              <div className="bg-[#0F0F12]/90 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white/10 shadow-xl">
-                <div className="text-xs font-mono font-bold tracking-wider uppercase text-neutral-400 mb-2">
+              <div className="bg-[#0F0F12]/90 backdrop-blur-md p-4 sm:p-8 rounded-2xl border border-white/10 shadow-xl">
+                <div className="text-[10px] sm:text-xs font-mono font-bold tracking-wider uppercase text-neutral-400 mb-2">
                   AGENTIC // AUTONOMOUS // SELF-REINFORCING
                 </div>
                 
-                <h3 className="font-extrabold text-2xl sm:text-3xl text-white tracking-tight leading-snug mb-6">
+                <h3 className="font-extrabold text-xl sm:text-3xl text-white tracking-tight leading-snug mb-4 sm:mb-6">
                   Five Pillars of Autonomous Compounding
                 </h3>
 
@@ -381,14 +381,14 @@ export default function ProcessWorkflow() {
                       <button
                         key={step.id}
                         onClick={() => setActiveId(step.id)}
-                        className={`w-full text-left p-3.5 sm:p-4 rounded-xl transition-all duration-300 flex items-start gap-4 border cursor-pointer ${
+                        className={`w-full text-left p-3 sm:p-4 rounded-xl transition-all duration-300 flex items-start gap-3 sm:gap-4 border cursor-pointer ${
                           isSelected
                             ? 'bg-white/[0.08] border-white shadow-md ring-1 ring-white/30'
                             : 'bg-white/[0.02] border-white/10 hover:bg-white/[0.05] hover:border-white/20'
                         }`}
                       >
                         {/* Step Number Circle */}
-                        <div className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center font-mono font-extrabold text-xs transition-colors ${
+                        <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full shrink-0 flex items-center justify-center font-mono font-extrabold text-[11px] sm:text-xs transition-colors ${
                           isSelected ? 'bg-white text-black' : 'bg-white/10 text-neutral-400'
                         }`}>
                           {step.id}
@@ -464,7 +464,7 @@ export default function ProcessWorkflow() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 items-stretch">
             
             {/* Left Branch: The Status Quo Friction Flow */}
             <motion.div 
@@ -472,7 +472,7 @@ export default function ProcessWorkflow() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-[#FFF8F8] rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 border border-red-200 relative flex flex-col justify-between space-y-6 shadow-md text-[#1A1A1A]"
+              className="bg-[#FFF8F8] rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 border border-red-200 relative flex flex-col justify-between space-y-5 shadow-md text-[#1A1A1A]"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between pb-4 border-b border-red-200">
@@ -540,7 +540,7 @@ export default function ProcessWorkflow() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 border-2 border-[#0A0A0A] shadow-xl relative flex flex-col justify-between space-y-6 text-[#0A0A0A]"
+              className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 border-2 border-[#0A0A0A] shadow-xl relative flex flex-col justify-between space-y-5 text-[#0A0A0A]"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between pb-4 border-b border-[#EAE6DF]">
