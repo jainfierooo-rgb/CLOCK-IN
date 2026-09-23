@@ -6,25 +6,34 @@ import { ArrowUpRight, MessageSquare, Calendar, CheckCircle2, Mail } from 'lucid
 
 export default function FinalCta() {
   const [contact, setContact] = useState('');
+  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [leadId, setLeadId] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!contact) return;
+    setLoading(true);
     try {
-      await fetch('/api/contact', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: 'Executive Inquirer',
-          email: contact,
-          industry: 'Enterprise General',
-          message: 'Requested Clockin AI 21-Day Blueprint Consultation',
+          contact,
+          type: 'Engineering Callback',
+          source: 'Final CTA Callback Form',
+          notes: 'Requested Clockin AI 21-Day Blueprint Consultation',
         }),
       });
+      const data = await res.json();
+      if (data?.lead?.id) {
+        setLeadId(data.lead.id);
+      }
       setSubmitted(true);
     } catch {
       setSubmitted(true);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -82,9 +91,14 @@ export default function FinalCta() {
           </p>
 
           {submitted ? (
-            <div className="flex items-center justify-center gap-2 text-xs font-mono text-[#0A0A0A] bg-[#FAF8F5] py-3 px-4 rounded-xl border border-[#EAE6DF]">
-              <CheckCircle2 className="w-4 h-4 text-[#0A0A0A]" />
-              <span>Inquiry registered. An enterprise architect will respond within 2 hours.</span>
+            <div className="flex flex-col items-center justify-center gap-1.5 text-xs font-mono text-[#0A0A0A] bg-[#FAF8F5] py-3.5 px-4 rounded-xl border border-[#EAE6DF] shadow-xs">
+              <div className="flex items-center gap-2 font-bold text-[#166534]">
+                <CheckCircle2 className="w-4 h-4 text-[#166534] shrink-0" />
+                <span>Inquiry Registered {leadId ? `// ${leadId}` : ''}</span>
+              </div>
+              <p className="text-[11px] text-[#5A5852] font-sans">
+                Logged to enterprise dispatch queue. An architect will contact you within 2 hours.
+              </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
@@ -98,9 +112,10 @@ export default function FinalCta() {
               />
               <button
                 type="submit"
-                className="btn-teal-primary px-5 py-3 text-xs font-bold uppercase tracking-wider whitespace-nowrap rounded-xl flex items-center justify-center gap-1 cursor-pointer"
+                disabled={loading}
+                className="btn-teal-primary px-5 py-3 text-xs font-bold uppercase tracking-wider whitespace-nowrap rounded-xl flex items-center justify-center gap-1 cursor-pointer disabled:opacity-60 transition-opacity"
               >
-                <span>Dispatch</span>
+                <span>{loading ? 'Dispatching...' : 'Dispatch'}</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </button>
             </form>

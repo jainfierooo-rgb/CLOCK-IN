@@ -1,0 +1,79 @@
+[
+  {
+    "id": "CLK-2026-007",
+    "timestampUTC": "2026-09-23T13:36:33.297Z",
+    "timestampIST": "23 Sept 2026, 07:06 pm IST",
+    "contact": "testing.architect@enterprise.com",
+    "medium": "Email",
+    "type": "Engineering Callback",
+    "source": "Final CTA Callback Form",
+    "status": "NEW LEAD",
+    "notes": "Requested Clockin AI 21-Day Blueprint Consultation"
+  },
+  {
+    "id": "CLK-2026-006",
+    "timestampUTC": "2026-09-23T13:31:35.974Z",
+    "timestampIST": "23 Sept 2026, 07:01 pm IST",
+    "contact": "briefing.subscriber@enterpriseai.org",
+    "medium": "Email",
+    "type": "Executive Briefing Subscriber",
+    "source": "Footer Briefing Dispatch Bar",
+    "status": "NEW LEAD",
+    "notes": "Subscribed to Quarterly Enterprise AI Architecture Briefings"
+  },
+  {
+    "id": "CLK-2026-005",
+    "timestampUTC": "2026-09-23T13:31:25.663Z",
+    "timestampIST": "23 Sept 2026, 07:01 pm IST",
+    "contact": "+91 94471 99999",
+    "medium": "WhatsApp / Phone",
+    "type": "Engineering Callback",
+    "source": "Final CTA Callback Form",
+    "status": "NEW LEAD",
+    "notes": "Requested Clockin AI Engineering Callback"
+  },
+  {
+    "id": "CLK-2026-004",
+    "timestampUTC": "2026-09-23T13:31:15.917Z",
+    "timestampIST": "23 Sept 2026, 07:01 pm IST",
+    "contact": "exec.vp@globaltechnologies.com",
+    "medium": "Email",
+    "type": "Engineering Callback",
+    "source": "Final CTA Callback Form",
+    "status": "NEW LEAD",
+    "notes": "Requested Clockin AI Engineering Callback"
+  },
+  {
+    "id": "CLK-2026-001",
+    "timestampUTC": "2026-09-23T13:29:36.664Z",
+    "timestampIST": "23 Sept 2026, 06:59 pm IST",
+    "contact": "director@luxuryresorts.com",
+    "medium": "Email",
+    "type": "Engineering Callback",
+    "source": "Final CTA Callback Form",
+    "status": "NEW LEAD",
+    "notes": "Requested Clockin AI 21-Day Blueprint Consultation"
+  },
+  {
+    "id": "CLK-2026-002",
+    "timestampUTC": "2026-09-23T13:29:36.682Z",
+    "timestampIST": "23 Sept 2026, 06:59 pm IST",
+    "contact": "+91 88485 63824",
+    "medium": "WhatsApp / Phone",
+    "type": "Engineering Callback",
+    "source": "Final CTA Callback Form",
+    "status": "NEW LEAD",
+    "notes": "Inquiry regarding clinical AI concierge setup"
+  },
+  {
+    "id": "CLK-2026-003",
+    "timestampUTC": "2026-09-23T13:29:36.682Z",
+    "timestampIST": "23 Sept 2026, 06:59 pm IST",
+    "contact": "cto@enterprisecloud.io",
+    "medium": "Email",
+    "type": "Newsletter Subscriber",
+    "source": "Footer Architecture Briefing",
+    "status": "ACTIVE",
+    "notes": "Quarterly AI architecture briefings subscriber"
+  }
+]

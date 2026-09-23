@@ -1,35 +1,49 @@
 import { NextResponse } from 'next/server';
+import { addLead, getAllLeads } from '@/lib/excelManager';
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, company, industry, message } = body;
+    
+    // Support both streamlined callback { contact, type, source } and legacy contact forms { email, name, ... }
+    const contactValue = (body.contact || body.email || '').trim();
 
-    if (!email || !name) {
+    if (!contactValue) {
       return NextResponse.json(
-        { error: 'Name and email are required' },
+        { error: 'Contact detail (Work email or WhatsApp number) is required' },
         { status: 400 }
       );
     }
 
-    // In production, sync to CRM, WhatsApp webhook, or database
-    console.log('[CLOCKIN AI Contact Lead Captured]:', {
-      name,
-      email,
-      company: company || 'N/A',
-      industry: industry || 'General',
-      message: message || '',
-      timestamp: new Date().toISOString(),
+    const leadType = body.type || (body.message?.includes('Subscription') ? 'Newsletter Subscriber' : 'Engineering Callback');
+    const leadSource = body.source || (body.industry ? `Industry Inquiry: ${body.industry}` : 'Fast Callback Form');
+    const leadNotes = body.notes || body.message || (body.company ? `Company: ${body.company}` : 'Requested Clockin AI Engineering Callback');
+
+    const lead = await addLead({
+      contact: contactValue,
+      type: leadType,
+      source: leadSource,
+      notes: leadNotes,
     });
 
     return NextResponse.json({
       success: true,
-      message: 'Consultation request received. A technical director will reach out within 2 hours.',
+      lead,
+      message: 'Inquiry registered. An enterprise architect will respond within 2 hours.',
     });
   } catch (error) {
+    console.error('Failed to process contact lead:', error);
     return NextResponse.json(
       { error: 'Failed to process request' },
       { status: 500 }
     );
   }
+}
+
+export async function GET() {
+  const leads = getAllLeads();
+  return NextResponse.json({
+    total: leads.length,
+    leads,
+  });
 }
