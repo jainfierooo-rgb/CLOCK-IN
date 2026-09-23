@@ -17,7 +17,6 @@ export interface LeadRecord {
 const DATA_DIR = path.join(process.cwd(), 'data');
 const LEADS_JSON_PATH = path.join(DATA_DIR, 'leads.json');
 const EXCEL_OUTPUT_PATH = path.join(DATA_DIR, 'Clockin_AI_Subscribers_and_Leads.xlsx');
-const PUBLIC_EXCEL_PATH = path.join(process.cwd(), 'public', 'Clockin_AI_Subscribers_and_Leads.xlsx');
 
 // Ensure data directory exists
 function ensureDataDir() {
@@ -283,8 +282,6 @@ export async function addLead(params: {
   try {
     const workbook = await generateBeautifulExcel(leads);
     await workbook.xlsx.writeFile(EXCEL_OUTPUT_PATH);
-    // Also save in public folder for direct client downloads
-    await workbook.xlsx.writeFile(PUBLIC_EXCEL_PATH);
     console.log(`[Clockin AI] Beautiful Excel file updated at: ${EXCEL_OUTPUT_PATH}`);
   } catch (err) {
     console.error('[Clockin AI] Error writing Excel file (may be open in Excel):', err);

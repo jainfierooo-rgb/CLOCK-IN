@@ -3,7 +3,15 @@ import { getAllLeads, generateBeautifulExcel } from '@/lib/excelManager';
 
 export const dynamic = 'force-dynamic';
 
-export async function GET() {
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const key = searchParams.get('key');
+  const adminSecret = process.env.ADMIN_SECRET_KEY || 'clockin2026';
+
+  if (key !== adminSecret) {
+    return new NextResponse('Unauthorized: Admin key required to access this file.', { status: 401 });
+  }
+
   try {
     const leads = getAllLeads();
     const workbook = await generateBeautifulExcel(leads);

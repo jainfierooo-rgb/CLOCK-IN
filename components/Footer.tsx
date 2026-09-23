@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowUpRight, ShieldCheck, CheckCircle2, PhoneCall, MessageSquare, Mail, ArrowDownToLine } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, CheckCircle2, PhoneCall, MessageSquare, Mail } from 'lucide-react';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -331,7 +331,7 @@ export default function Footer() {
         {/* Bottom Legal & Attribution */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 font-mono gap-4">
           <div>&copy; 2026 Clockin AI. All rights reserved. Autonomous neural enterprise infrastructure.</div>
-          <div className="flex flex-wrap items-center gap-6 text-xs">
+          <div className="flex flex-wrap gap-6 text-xs">
             <Link href="/privacy" className="hover:text-white transition-colors">
               Privacy Architecture
             </Link>
@@ -344,15 +344,6 @@ export default function Footer() {
             <Link href="/architecture" className="hover:text-white transition-colors">
               System Architecture
             </Link>
-            <a
-              href="/api/download-excel"
-              download="Clockin_AI_Subscribers_and_Leads.xlsx"
-              className="text-neutral-300 hover:text-white transition-colors inline-flex items-center gap-1.5 font-bold bg-white/10 hover:bg-white/20 px-2.5 py-1 rounded-md border border-white/15"
-              title="Download latest subscribers and leads Excel spreadsheet (.xlsx)"
-            >
-              <ArrowDownToLine className="w-3.5 h-3.5 text-white" />
-              <span>Export Leads (.xlsx)</span>
-            </a>
           </div>
         </div>
 
